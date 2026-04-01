@@ -508,15 +508,15 @@ textarea::placeholder {
   background: rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(13, 148, 136, 0.2);
   border-radius: 4px;
-  padding: 1.5rem;
-  max-width: 360px;
+  padding: 2rem;
+  max-width: 480px;
   overflow: hidden;
   position: relative;
 }
 
 .dispatch-terminal-header {
   font-family: 'Courier New', monospace;
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   color: var(--color-primary);
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -525,12 +525,12 @@ textarea::placeholder {
 }
 
 .dispatch-ticker-wrapper {
-  height: 180px;
+  height: 240px;
   overflow: hidden;
 }
 
 .dispatch-ticker {
-  animation: ticker-scroll 12s linear infinite;
+  animation: ticker-scroll 6s linear infinite;
 }
 
 @keyframes ticker-scroll {
@@ -541,16 +541,16 @@ textarea::placeholder {
 
 .dispatch-item {
   font-family: 'Courier New', monospace;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: rgba(13, 148, 136, 0.8);
   line-height: 1.6;
-  padding: 0.75rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid rgba(13, 148, 136, 0.1);
 }
 
 .dispatch-timestamp {
   font-family: 'Courier New', monospace;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   color: rgba(220, 38, 38, 0.6);
   display: block;
   margin-bottom: 0.25rem;
