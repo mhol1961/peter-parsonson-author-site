@@ -800,7 +800,7 @@ textarea::placeholder {
 /* Launch origin — the ship circled in the screenshot, right of text, left of book cover */
 .missile-launch {
   position: absolute;
-  left: 58%;
+  left: 64%;
   top: 55%;
   z-index: 2;
   pointer-events: none;
@@ -913,14 +913,14 @@ textarea::placeholder {
 }
 
 @keyframes radar-missile-track {
-  0%, 3% { opacity: 0; top: 55%; left: 60%; }
-  5% { opacity: 1; top: 55%; left: 60%; }
-  20% { opacity: 1; top: 50%; left: 55%; }
-  40% { opacity: 1; top: 45%; left: 50%; }
-  60% { opacity: 1; top: 40%; left: 45%; }
-  75% { opacity: 0.6; top: 37%; left: 42%; }
-  85% { opacity: 0; top: 35%; left: 40%; }
-  100% { opacity: 0; top: 35%; left: 40%; }
+  0%, 3% { opacity: 0; top: 35%; left: 55%; }
+  5% { opacity: 1; top: 35%; left: 55%; }
+  20% { opacity: 1; top: 30%; left: 52%; }
+  40% { opacity: 1; top: 25%; left: 48%; }
+  60% { opacity: 1; top: 22%; left: 44%; }
+  75% { opacity: 0.6; top: 20%; left: 42%; }
+  85% { opacity: 0; top: 18%; left: 40%; }
+  100% { opacity: 0; top: 18%; left: 40%; }
 }
 
 /* ============================================
