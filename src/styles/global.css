@@ -802,7 +802,7 @@ textarea::placeholder {
 .missile-launch {
   position: absolute;
   left: 62%;
-  top: 48%;
+  top: 56%;
   z-index: 2;
   pointer-events: none;
 }
