@@ -801,7 +801,7 @@ textarea::placeholder {
 /* Launch origin — the ship circled in the screenshot, right of text, left of book cover */
 .missile-launch {
   position: absolute;
-  left: 71%;
+  left: 76%;
   top: 56%;
   z-index: 2;
   pointer-events: none;
