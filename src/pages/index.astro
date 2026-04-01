@@ -30,8 +30,11 @@ import NewsletterSignup from '@components/NewsletterSignup.astro';
         <div class="radar-sweep"></div>
         <div class="radar-blip" style="top:25%;left:60%"></div>
         <div class="radar-blip-2" style="bottom:30%;right:25%"></div>
-        <div class="radar-missile-blip"></div>
       </div>
+    </div>
+    <!-- Green missile tracking blip — outside the opacity-15 container so it's fully visible -->
+    <div class="absolute left-0 bottom-0 w-[500px] h-[500px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] z-[4] -translate-x-1/4 translate-y-1/4 pointer-events-none hidden md:block">
+      <div class="radar-missile-blip"></div>
     </div>
 
     <div class="relative max-w-7xl mx-auto px-6 py-24 z-10">

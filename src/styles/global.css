@@ -904,11 +904,11 @@ textarea::placeholder {
 /* Radar missile blip — synced with launch, appears on the radar */
 .radar-missile-blip {
   position: absolute;
-  width: 4px;
-  height: 4px;
-  background: rgba(0, 255, 65, 0.95);
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 255, 65, 1);
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(0, 255, 65, 0.8), 0 0 16px rgba(0, 255, 65, 0.4);
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.9), 0 0 30px rgba(0, 255, 65, 0.5), 0 0 50px rgba(0, 255, 65, 0.2);
   animation: radar-missile-track 3s linear infinite;
   pointer-events: none;
 }
