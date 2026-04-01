@@ -1,0 +1,137 @@
+---
+// SEOHead.astro - Reusable SEO component with structured data
+export interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  canonical?: string;
+  type?: 'website' | 'article' | 'book' | 'person';
+  author?: string;
+  publishDate?: string;
+  image?: string;
+}
+
+const {
+  title,
+  description,
+  ogImage = '/og-image.jpg',
+  canonical,
+  type = 'website',
+  author = 'Peter P.',
+  publishDate,
+  image
+} = Astro.props;
+
+const siteUrl = 'https://peterparsonson.com';
+const canonicalUrl = canonical ? new URL(canonical, siteUrl) : new URL(Astro.url.pathname, siteUrl);
+
+// JSON-LD structured data
+let jsonLd: any = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${siteUrl}/#author`,
+  name: 'Peter Parsonson',
+  jobTitle: 'Military Thriller Author',
+  description: 'Military thriller author and USCG Authors Program member',
+  url: siteUrl,
+  image: `${siteUrl}/images/Front-Cover.jpg`,
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Georgia Institute of Technology'
+  },
+  sameAs: [
+    'https://twitter.com/peterp',
+    'https://www.instagram.com/peterp',
+    'https://www.facebook.com/peterp'
+  ]
+};
+
+if (type === 'article') {
+  jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description: description,
+    image: image ? `${siteUrl}${image}` : `${siteUrl}${ogImage}`,
+    datePublished: publishDate || new Date().toISOString(),
+    author: {
+      '@type': 'Person',
+      name: author,
+      url: siteUrl
+    },
+    publisher: {
+      '@type': 'Person',
+      name: 'Peter Parsonson',
+      url: siteUrl
+    }
+  };
+} else if (type === 'book') {
+  jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Book',
+    name: 'The Tempest Toss',
+    description: description,
+    image: `${siteUrl}/images/Front-Cover.jpg`,
+    url: `${siteUrl}/books/`,
+    author: {
+      '@type': 'Person',
+      name: 'Peter Parsonson',
+      url: siteUrl
+    },
+    bookFormat: 'https://schema.org/Paperback',
+    inLanguage: 'en',
+    genre: 'Military Thriller',
+    numberOfPages: 400
+  };
+} else if (type === 'website') {
+  jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: title,
+    description: description,
+    url: siteUrl
+  };
+}
+---
+
+<head>
+  <!-- Essential Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="author" content={author} />
+  <meta name="theme-color" content="#0F172A" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href={canonicalUrl.toString()} />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content={type === 'article' ? 'article' : 'website'} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+  <meta property="og:url" content={canonicalUrl.toString()} />
+  <meta property="og:site_name" content="Peter P. - Military Thriller Author" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
+  <meta name="twitter:creator" content="@peterp" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <!-- Security Headers as Meta Tags -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://formspree.io https://api.mailchimp.com;" />
+
+  <!-- Title -->
+  <title>{title}</title>
+</head>

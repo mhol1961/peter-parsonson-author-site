@@ -1,0 +1,338 @@
+---
+// Books page - The John Hunter Series by Peter P.
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="The Tempest Toss — Book Details | Peter P."
+  description="Navy SEAL Commander John Hunter faces a coordinated terror attack on Tampa and discovers a weapon hidden in America's own infrastructure. The Dark Territory Protocol."
+  type="book"
+>
+  <!-- Page Hero - Full-viewport cinematic mission file -->
+  <section class="section-darker relative min-h-screen flex items-center overflow-hidden scan-lines books-hero-cinematic">
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 py-24">
+      <div class="max-w-3xl">
+        <div>
+          <p class="mil-text mb-3">File Ref: JH-001 // Operation Tempest</p>
+          <p class="section-label mb-6">The John Hunter Series</p>
+
+          <h1 class="font-heading font-black text-cream leading-[0.95] mb-8 text-shadow-heavy">
+            <span class="block text-6xl md:text-7xl lg:text-8xl uppercase tracking-tighter">The</span>
+            <span class="block text-6xl md:text-7xl lg:text-8xl uppercase tracking-tighter">Tempest</span>
+            <span class="block text-6xl md:text-7xl lg:text-8xl uppercase tracking-tighter text-accent">Toss</span>
+          </h1>
+
+          <p class="text-xl md:text-2xl text-gray-200 max-w-xl leading-relaxed font-light mb-10">
+            Navy SEAL Commander John Hunter. Cold War secrets. A conspiracy that reaches the highest levels of power.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#synopsis" class="btn-primary">
+              Read the Brief
+            </a>
+            <a href="/about" class="btn-secondary text-center">
+              Meet the Author
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-6 h-6 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Featured Book: The Tempest Toss - Full Synopsis -->
+  <section id="synopsis" class="section-dark py-16 md:py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <!-- Top: Cover + Title side by side -->
+      <div class="flex flex-col md:flex-row gap-12 items-center md:items-end mb-16 fade-in-up">
+        <div class="flex-shrink-0">
+          <div class="book-cover-wrapper">
+            <div class="aspect-[2/3] w-64 md:w-72 lg:w-80 border-2 border-gray-700 flex items-center justify-center overflow-hidden shadow-2xl" style="box-shadow: 0 20px 60px rgba(0,0,0,0.7), -8px 8px 0 rgba(220, 38, 38, 0.2);">
+              <img src="/images/Front-Cover.jpg" alt="The Tempest Toss by Peter P." class="w-full h-full object-cover" loading="eager" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="inline-block border border-gray-700 px-4 py-2 mb-6">
+            <span class="text-primary uppercase tracking-widest font-bold text-xs">Book 1 — John Hunter Series</span>
+          </div>
+          <h2 class="text-5xl md:text-6xl font-heading font-black text-cream mb-6 uppercase tracking-tighter">
+            The Tempest<br/>Toss
+          </h2>
+          <p class="text-cream font-heading font-black text-2xl uppercase tracking-wide">
+            Some Debts Take Sixty Years to Come Due.
+          </p>
+        </div>
+      </div>
+
+      <!-- Classified Dossier Panel -->
+      <div class="border border-gray-700 p-8 md:p-12 mb-12 fade-in-up" style="background: rgba(17,24,39,0.8); border-left: 4px solid rgba(220, 38, 38, 0.6);">
+        <div class="mb-6">
+          <p class="text-accent uppercase tracking-widest font-bold text-xs mb-1">Classification: Top Secret // NOFORN</p>
+          <p class="text-primary uppercase tracking-widest font-bold text-xs">File: The Tempest Toss — John Hunter Series, Book 1</p>
+        </div>
+        <div class="space-y-6 text-gray-200 text-lg leading-relaxed">
+          <p>July 9, 1962. A Thor missile carrying a 1.45-megaton warhead detonates 250 miles above Johnston Island in the South Pacific. The test — code-named Starfish Prime — is meant to study high-altitude nuclear effects. What it reveals is something far more dangerous: a single detonation can kill every unshielded circuit within line of sight.</p>
+          <p>Sixty years later, the science perfected in secret becomes a nightmare made real. A coordinated terrorist attack erupts across the Port of Tampa during the Gasparilla festival — fuel terminals detonated, a tanker ship destroyed, a cruise liner with 3,500 passengers caught in the blast radius. Six thousand dead in minutes.</p>
+          <p>Navy SEAL Commander John Hunter — fifteen years of special operations, stationed at USSOCOM headquarters, MacDill Air Force Base — is caught in the attack with his family on the Crosstown Expressway. What begins as survival becomes a hunt, as Hunter discovers the port strike was only the opening move in something far larger: a weapon system hidden not in a warhead, but in the infrastructure itself.</p>
+          <p class="text-accent font-semibold italic">The Dark Territory Protocol. Pre-positioned. Patient. And already inside the wire.</p>
+        </div>
+        <div class="mt-8 pt-6 border-t border-gray-700">
+          <p class="text-gray-500 uppercase tracking-widest text-xs">Distribution: Authorized Personnel Only</p>
+          <p class="text-gray-500 uppercase tracking-widest text-xs">Ref: Dark Territory Protocol — Eyes Only</p>
+        </div>
+      </div>
+
+      <!-- Book metadata -->
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-12 fade-in-up">
+        <div class="border border-gray-800 p-4 text-center">
+          <p class="text-gray-500 uppercase tracking-widest text-[10px] mb-1">Series</p>
+          <p class="text-cream font-bold text-sm">John Hunter</p>
+        </div>
+        <div class="border border-gray-800 p-4 text-center">
+          <p class="text-gray-500 uppercase tracking-widest text-[10px] mb-1">Book</p>
+          <p class="text-cream font-bold text-sm">1 of 5</p>
+        </div>
+        <div class="border border-gray-800 p-4 text-center">
+          <p class="text-gray-500 uppercase tracking-widest text-[10px] mb-1">Chapters</p>
+          <p class="text-cream font-bold text-sm">27</p>
+        </div>
+        <div class="border border-gray-800 p-4 text-center">
+          <p class="text-gray-500 uppercase tracking-widest text-[10px] mb-1">Author</p>
+          <p class="text-cream font-bold text-sm">Peter P.</p>
+        </div>
+        <div class="border border-gray-800 p-4 text-center">
+          <p class="text-gray-500 uppercase tracking-widest text-[10px] mb-1">Status</p>
+          <p class="text-accent font-bold text-sm">Coming 2026</p>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#series-overview" class="btn-primary text-center">Explore the Series</a>
+        <a href="/about" class="btn-secondary text-center">About the Author</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Themes & Details Section -->
+  <section class="section-darker py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16">
+        <!-- Left: What Readers Expect -->
+        <div class="fade-in-left">
+          <div class="border-l-4 border-accent pl-8">
+            <h3 class="text-2xl font-heading font-black text-cream uppercase tracking-wide mb-8">
+              What Readers Expect
+            </h3>
+            <div class="space-y-6 text-gray-300 leading-relaxed">
+              <p>
+                The Tempest Toss is a military thriller grounded in real science and declassified history. The electromagnetic pulse threat at the heart of the story isn't fiction—it's drawn from sixty years of classified weapons research most Americans have never heard of.
+              </p>
+              <p>
+                Peter P. spent twenty-two years mastering every detail. A chemist's precision meets a storyteller's instinct. Characters you believe. Operations that ring true.
+              </p>
+              <p class="text-gray-400">
+                This is Jack Carr territory: authentic, brutal, uncompromising.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Core Themes -->
+        <div class="fade-in-right">
+          <h3 class="text-2xl font-heading font-black text-cream uppercase tracking-wide mb-8">
+            Core Themes
+          </h3>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4 pb-4 border-b border-gray-800">
+              <div class="w-3 h-3 bg-accent mt-1.5 flex-shrink-0"></div>
+              <p class="text-gray-300 font-semibold">Cold War Legacy and Its Modern Consequences</p>
+            </div>
+            <div class="flex items-start gap-4 pb-4 border-b border-gray-800">
+              <div class="w-3 h-3 bg-accent mt-1.5 flex-shrink-0"></div>
+              <p class="text-gray-300 font-semibold">The EMP Threat and Weapons Science</p>
+            </div>
+            <div class="flex items-start gap-4 pb-4 border-b border-gray-800">
+              <div class="w-3 h-3 bg-accent mt-1.5 flex-shrink-0"></div>
+              <p class="text-gray-300 font-semibold">Navy SEAL Operations and Military Authenticity</p>
+            </div>
+            <div class="flex items-start gap-4 pb-4 border-b border-gray-800">
+              <div class="w-3 h-3 bg-accent mt-1.5 flex-shrink-0"></div>
+              <p class="text-gray-300 font-semibold">Government Conspiracies and Domestic Terrorism</p>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-3 h-3 bg-primary mt-1.5 flex-shrink-0"></div>
+              <p class="text-gray-300 font-semibold">What Fiction Can Say That the Official Record Cannot</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upcoming Books - Dramatic numbered cards -->
+  <section class="section-dark py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="section-label">Operations Dossier</p>
+        <h2 class="text-4xl md:text-5xl font-heading font-black text-cream mb-6 uppercase tracking-tighter">
+          The Complete<br/>John Hunter Series
+        </h2>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+          Four more books planned. Book 2 in development. The hunt continues.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[2, 3, 4, 5].map((num, i) => (
+          <div class="group relative fade-in-up" style={`transition-delay: ${i * 0.1}s`}>
+            <div class="aspect-[2/3] bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800 group-hover:border-accent/50 transition-all flex flex-col items-center justify-center relative overflow-visible">
+              <span class="absolute top-2 right-3 font-heading font-bold text-white/[0.07]" style="font-size: 3rem;">0{num}</span>
+              <span class="text-8xl font-heading font-black text-gray-700 group-hover:text-accent/30 transition-colors relative z-10">
+                {num}
+              </span>
+              <p class="text-gray-600 text-sm mt-4 uppercase tracking-widest font-bold relative z-10">
+                {num <= 3 ? 'Coming Soon' : 'Classified'}
+              </p>
+              {num > 3 && (
+                <span class="classified-stamp">Classified</span>
+              )}
+            </div>
+            <div class="mt-4 p-4 border border-gray-800">
+              <p class="text-[10px] text-primary/60 uppercase tracking-[0.2em] font-bold">Protocol 0{num}</p>
+              <h3 class="text-sm font-heading font-black text-cream uppercase tracking-wide mb-1">{num === 2 ? 'Title TBA — 2027' : 'Classified'}</h3>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Series Overview Timeline -->
+  <section id="series-overview" class="section-darker py-16 md:py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="section-label">Operations Dossier</p>
+        <h2 class="text-4xl md:text-5xl font-heading font-black text-cream uppercase tracking-tighter mb-4">
+          Series Timeline
+        </h2>
+        <p class="text-gray-400 text-lg max-w-3xl mx-auto">
+          A five-book military thriller series. Navy SEAL Commander John Hunter. Cold War conspiracies. Modern threats. One man's fight against enemies unseen.
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <!-- Book 1: The Tempest Toss - Featured -->
+        <div class="group relative">
+          <div class="border-l-4 border-accent bg-section-card p-8 hover:bg-opacity-80 transition-all">
+            <div class="flex flex-col md:flex-row gap-8">
+              <!-- Cover thumbnail -->
+              <div class="w-32 h-44 flex-shrink-0 flex-grow-0">
+                <img
+                  src="/images/Front-Cover.jpg"
+                  alt="The Tempest Toss cover"
+                  class="w-full h-full object-contain border border-gray-700"
+                  loading="lazy"
+                  onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'text-gray-500 text-xs text-center p-2\'>Cover</span>'"
+                />
+              </div>
+              <!-- Details -->
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="inline-block border border-gray-700 px-3 py-1 text-xs font-bold text-cream uppercase tracking-wide">Book 1</span>
+                  <span class="inline-block border border-accent px-3 py-1 text-xs font-bold text-accent uppercase tracking-wide">Coming 2026</span>
+                </div>
+                <h3 class="text-3xl font-heading font-black text-cream mb-4 uppercase tracking-wide">
+                  The Tempest Toss
+                </h3>
+                <p class="text-gray-300 leading-relaxed mb-6">
+                  Navy SEAL Commander John Hunter survives a devastating terrorist attack on Tampa and uncovers a sixty-year conspiracy rooted in Cold War EMP weapons research. With a Chinese freighter running dark in the Gulf and a traitor inside the wire, the race to prevent catastrophe begins.
+                </p>
+                <a href="/contact" class="inline-flex items-center text-accent font-bold uppercase tracking-wide hover:text-primary transition-colors">
+                  Get Notified &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Books 2-5 Minimal Placeholders -->
+        {[2, 3, 4, 5].map((num) => (
+          <div class="border-l-4 border-primary/40 bg-section-card/40 p-8 opacity-70 hover:opacity-100 transition-opacity">
+            <div class="flex items-center gap-8">
+              <div class="w-24 h-32 flex-shrink-0 bg-gray-900 border border-gray-800 flex items-center justify-center">
+                <span class="text-5xl font-heading font-black text-primary/20">{num}</span>
+              </div>
+              <div>
+                <div class="flex items-center gap-3 mb-3">
+                  <span class="text-xs font-bold text-gray-500 uppercase tracking-wide">Book {num}</span>
+                  <span class="text-xs font-bold text-gray-600 uppercase tracking-wide">Coming Soon</span>
+                </div>
+                <h3 class="text-xl font-heading font-black text-cream mb-2 uppercase tracking-wide">
+                  John Hunter Series — Book {num}
+                </h3>
+                <p class="text-gray-400">
+                  Title and details to be announced. Subscribe to the newsletter for updates.
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Chapter Titles — Atmospheric Texture -->
+  <section class="section-card py-6 border-y border-white/5">
+    <div class="marquee-wrapper">
+      <span class="marquee-content mil-text" style="animation-duration: 40s;">ECHOES OF JOHNSTON &nbsp;&bull;&nbsp; WARNING ORDER &nbsp;&bull;&nbsp; MEASURED RESPONSE &nbsp;&bull;&nbsp; THE SHADOW ARCHITECTS &nbsp;&bull;&nbsp; PANDORA'S BOX &nbsp;&bull;&nbsp; CONVERGENCE &nbsp;&bull;&nbsp; THE GUAM GAMBIT &nbsp;&bull;&nbsp; DECEPTION'S VEIL &nbsp;&bull;&nbsp; BREACH AND FURY &nbsp;&bull;&nbsp; EXTRACTION PROTOCOL &nbsp;&bull;&nbsp; SKYFIRE &nbsp;&bull;&nbsp; THE DRAGON'S TEETH &nbsp;&bull;&nbsp; STRAIT OF RECKONING &nbsp;&bull;&nbsp; SUN TZU'S SHADOW &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; ECHOES OF JOHNSTON &nbsp;&bull;&nbsp; WARNING ORDER &nbsp;&bull;&nbsp; MEASURED RESPONSE &nbsp;&bull;&nbsp; THE SHADOW ARCHITECTS &nbsp;&bull;&nbsp; PANDORA'S BOX &nbsp;&bull;&nbsp; CONVERGENCE &nbsp;&bull;&nbsp; THE GUAM GAMBIT &nbsp;&bull;&nbsp; DECEPTION'S VEIL &nbsp;&bull;&nbsp; BREACH AND FURY &nbsp;&bull;&nbsp; EXTRACTION PROTOCOL &nbsp;&bull;&nbsp; SKYFIRE &nbsp;&bull;&nbsp; THE DRAGON'S TEETH &nbsp;&bull;&nbsp; STRAIT OF RECKONING &nbsp;&bull;&nbsp; SUN TZU'S SHADOW &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </section>
+
+  <!-- Pre-Release — Coming Soon -->
+  <section class="section-dark py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="section-label">Acquire Target</p>
+        <h2 class="text-4xl md:text-5xl font-heading font-black text-cream uppercase tracking-tighter mb-4">
+          Coming Summer 2026
+        </h2>
+        <p class="text-gray-400 text-lg">
+          The Tempest Toss will be available in paperback, hardcover, Kindle, and audiobook across all major platforms.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6 mb-12">
+        <div class="border-2 border-gray-800 p-6 text-center opacity-60" style="background: rgba(17,24,39,0.5);">
+          <h3 class="text-lg font-heading font-black text-cream uppercase tracking-wide mb-2">Amazon</h3>
+          <p class="text-sm text-gray-500">Paperback & Kindle</p>
+        </div>
+        <div class="border-2 border-gray-800 p-6 text-center opacity-60" style="background: rgba(17,24,39,0.5);">
+          <h3 class="text-lg font-heading font-black text-cream uppercase tracking-wide mb-2">Barnes & Noble</h3>
+          <p class="text-sm text-gray-500">Hardcover & Nook</p>
+        </div>
+        <div class="border-2 border-gray-800 p-6 text-center opacity-60" style="background: rgba(17,24,39,0.5);">
+          <h3 class="text-lg font-heading font-black text-cream uppercase tracking-wide mb-2">Apple Books</h3>
+          <p class="text-sm text-gray-500">Digital Edition</p>
+        </div>
+        <div class="border-2 border-gray-800 p-6 text-center opacity-60" style="background: rgba(17,24,39,0.5);">
+          <h3 class="text-lg font-heading font-black text-cream uppercase tracking-wide mb-2">Local Bookstore</h3>
+          <p class="text-sm text-gray-500">Support Independent</p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <p class="text-gray-400 mb-6">Be the first to know when pre-orders open.</p>
+        <a href="/contact" class="btn-primary">Get on the List</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

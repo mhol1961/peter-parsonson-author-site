@@ -1,0 +1,232 @@
+---
+// Contact page
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ContactForm from '@components/ContactForm.astro';
+---
+
+<BaseLayout
+  title="Contact Peter P. — Establish Comms"
+  description="Reach Peter P. for press inquiries, events, or questions about The Tempest Toss and the John Hunter Series."
+  type="website"
+>
+  <!-- Hero Section - Dramatic -->
+  <section class="section-darker py-24 md:py-40 relative overflow-hidden scan-lines" style="background-image: linear-gradient(135deg, rgba(10, 14, 26, 0.88) 0%, rgba(6, 10, 20, 0.82) 100%), url('/images/contact-hero-bg.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <div class="teal-divider mb-6"></div>
+      <p class="section-label">Secure Channel</p>
+      <h1 class="text-6xl md:text-7xl font-black uppercase tracking-tighter text-cream mb-6">
+        Establish Contact
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl leading-relaxed">
+        Got a question about the book? Interested in press, events, or collaboration? Open a secure channel below.
+      </p>
+    </div>
+  </section>
+
+  <!-- Divider Strip -->
+  <div class="accent-strip"></div>
+
+  <!-- Main Contact Section -->
+  <section class="section-dark py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-16 mb-20">
+        <!-- Contact Info Sidebar -->
+        <div class="md:col-span-1 fade-in-left">
+          <h2 class="text-3xl font-black uppercase tracking-tighter text-cream mb-8">
+            How to Reach
+          </h2>
+
+          <div class="space-y-8">
+            <!-- Email -->
+            <div class="section-card border-l-4 border-red-600 p-5">
+              <h3 class="text-xs uppercase tracking-widest text-red-500 font-black mb-3">
+                Email
+              </h3>
+              <a
+                href="mailto:hello@peterparsonson.com"
+                class="text-cream font-semibold hover:text-red-400 transition-colors break-all"
+              >
+                hello@peterparsonson.com
+              </a>
+            </div>
+
+            <!-- Speaking -->
+            <div class="section-card border-l-4 border-teal-600 p-5">
+              <h3 class="text-xs uppercase tracking-widest text-teal-400 font-black mb-3">
+                Speaking & Events
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Book clubs, writing conferences, military events, media appearances. Include event details in your inquiry.
+              </p>
+            </div>
+
+            <!-- Press -->
+            <div class="section-card border-l-4 border-red-600 p-5">
+              <h3 class="text-xs uppercase tracking-widest text-red-500 font-black mb-3">
+                Press & Media
+              </h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Journalists and media inquiries welcome. Press kit available upon request.
+              </p>
+            </div>
+
+            <!-- Response Time -->
+            <div class="section-card border-2 border-teal-600/50 p-5">
+              <p class="text-cream font-semibold text-sm uppercase tracking-wider">
+                Standard Response Time
+              </p>
+              <p class="text-gray-300 text-sm mt-2">
+                3-5 business days
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="md:col-span-2 fade-in-right">
+          <h2 class="text-3xl font-black uppercase tracking-tighter text-cream mb-8">
+            Send a Message
+          </h2>
+          <ContactForm />
+        </div>
+      </div>
+
+      <!-- Social Links Section -->
+      <div class="border-t border-red-600/30 pt-20">
+        <h2 class="text-4xl font-black uppercase tracking-tighter text-cream mb-4 text-center">
+          Connect on Social
+        </h2>
+        <div class="h-1 w-20 bg-red-600 mx-auto mb-12"></div>
+
+        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <!-- Twitter -->
+          <a
+            href="#"
+            class="section-card border border-red-600/30 hover:border-red-600/60 p-8 text-center transition-all duration-300 group hover:bg-red-600/5 fade-in-up stagger-1"
+          >
+            <div class="text-5xl mb-4 group-hover:scale-125 transition-transform duration-300">𝕏</div>
+            <h3 class="font-black text-cream uppercase tracking-wider text-sm group-hover:text-red-400 transition-colors">
+              Twitter / X
+            </h3>
+            <p class="text-xs text-gray-500 mt-3 font-semibold">@peterp</p>
+          </a>
+
+          <!-- Instagram -->
+          <a
+            href="#"
+            class="section-card border border-teal-600/30 hover:border-teal-600/60 p-8 text-center transition-all duration-300 group hover:bg-teal-600/5 fade-in-up stagger-2"
+          >
+            <div class="text-5xl mb-4 group-hover:scale-125 transition-transform duration-300">📷</div>
+            <h3 class="font-black text-cream uppercase tracking-wider text-sm group-hover:text-teal-400 transition-colors">
+              Instagram
+            </h3>
+            <p class="text-xs text-gray-500 mt-3 font-semibold">@peterp_author</p>
+          </a>
+
+          <!-- Facebook -->
+          <a
+            href="#"
+            class="section-card border border-red-600/30 hover:border-red-600/60 p-8 text-center transition-all duration-300 group hover:bg-red-600/5 fade-in-up stagger-3"
+          >
+            <div class="text-5xl mb-4 group-hover:scale-125 transition-transform duration-300">f</div>
+            <h3 class="font-black text-cream uppercase tracking-wider text-sm group-hover:text-red-400 transition-colors">
+              Facebook
+            </h3>
+            <p class="text-xs text-gray-500 mt-3 font-semibold">Peter P. Author</p>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="#"
+            class="section-card border border-teal-600/30 hover:border-teal-600/60 p-8 text-center transition-all duration-300 group hover:bg-teal-600/5 fade-in-up stagger-4"
+          >
+            <div class="text-5xl mb-4 group-hover:scale-125 transition-transform duration-300">in</div>
+            <h3 class="font-black text-cream uppercase tracking-wider text-sm group-hover:text-teal-400 transition-colors">
+              LinkedIn
+            </h3>
+            <p class="text-xs text-gray-500 mt-3 font-semibold">Peter P.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-darker py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-black uppercase tracking-tighter text-cream mb-4 text-center">
+        Questions?
+      </h2>
+      <div class="h-1 w-20 bg-red-600 mx-auto mb-12"></div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <details class="section-card border border-red-600/30 hover:border-red-600/60 p-6 group cursor-pointer transition-all duration-300 fade-in-up">
+          <summary class="flex items-center justify-between font-black text-cream group-hover:text-red-400 uppercase text-sm tracking-wider transition-colors">
+            <span>When will the book be available?</span>
+            <span class="text-2xl group-open:rotate-45 transition-transform duration-300">+</span>
+          </summary>
+          <div class="mt-4 text-gray-300 text-sm leading-relaxed border-t border-red-600/20 pt-4">
+            The Tempest Toss is targeting a Summer 2026 release. It will be available in paperback, hardcover, Kindle, and audiobook across all major platforms including Amazon, Barnes &amp; Noble, and Apple Books. Subscribe to the newsletter to be notified when pre-orders open.
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="section-card border border-teal-600/30 hover:border-teal-600/60 p-6 group cursor-pointer transition-all duration-300 fade-in-up">
+          <summary class="flex items-center justify-between font-black text-cream group-hover:text-teal-400 uppercase text-sm tracking-wider transition-colors">
+            <span>Do you do book signings or speaking events?</span>
+            <span class="text-2xl group-open:rotate-45 transition-transform duration-300">+</span>
+          </summary>
+          <div class="mt-4 text-gray-300 text-sm leading-relaxed border-t border-teal-600/20 pt-4">
+            Yes. I participate in book signings, writing conferences, book clubs, and literary events. I also speak at military and national security forums. Contact me with event details — virtual and in-person options available.
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="section-card border border-red-600/30 hover:border-red-600/60 p-6 group cursor-pointer transition-all duration-300 fade-in-up">
+          <summary class="flex items-center justify-between font-black text-cream group-hover:text-red-400 uppercase text-sm tracking-wider transition-colors">
+            <span>What's your publication schedule?</span>
+            <span class="text-2xl group-open:rotate-45 transition-transform duration-300">+</span>
+          </summary>
+          <div class="mt-4 text-gray-300 text-sm leading-relaxed border-t border-red-600/20 pt-4">
+            I publish roughly every 1-2 years. My priority is quality research and authenticity over speed. Subscribe to the newsletter for announcements about upcoming releases and exclusive content.
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="section-card border border-teal-600/30 hover:border-teal-600/60 p-6 group cursor-pointer transition-all duration-300 fade-in-up">
+          <summary class="flex items-center justify-between font-black text-cream group-hover:text-teal-400 uppercase text-sm tracking-wider transition-colors">
+            <span>Can my book club connect with you?</span>
+            <span class="text-2xl group-open:rotate-45 transition-transform duration-300">+</span>
+          </summary>
+          <div class="mt-4 text-gray-300 text-sm leading-relaxed border-t border-teal-600/20 pt-4">
+            Absolutely. Book clubs are encouraged to reach out. I enjoy discussing the work with readers and can often participate in virtual discussions. Contact me with your club details and proposed dates.
+          </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="section-card border border-red-600/30 hover:border-red-600/60 p-6 group cursor-pointer transition-all duration-300 fade-in-up">
+          <summary class="flex items-center justify-between font-black text-cream group-hover:text-red-400 uppercase text-sm tracking-wider transition-colors">
+            <span>Are your books based on real events?</span>
+            <span class="text-2xl group-open:rotate-45 transition-transform duration-300">+</span>
+          </summary>
+          <div class="mt-4 text-gray-300 text-sm leading-relaxed border-t border-red-600/20 pt-4">
+            The novels are works of fiction, but they draw inspiration from real military operations, declassified history, and extensive research. The operational details are authentic. The stories themselves are original creations designed to explore truths that official reports cannot.
+          </div>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details class="section-card border border-teal-600/30 hover:border-teal-600/60 p-6 group cursor-pointer transition-all duration-300 fade-in-up">
+          <summary class="flex items-center justify-between font-black text-cream group-hover:text-teal-400 uppercase text-sm tracking-wider transition-colors">
+            <span>Do you mentor aspiring authors?</span>
+            <span class="text-2xl group-open:rotate-45 transition-transform duration-300">+</span>
+          </summary>
+          <div class="mt-4 text-gray-300 text-sm leading-relaxed border-t border-teal-600/20 pt-4">
+            I provide occasional feedback and mentorship through writing conferences and workshops. Reach out to discuss specific opportunities. Writers serious about authenticity and research are encouraged to connect.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

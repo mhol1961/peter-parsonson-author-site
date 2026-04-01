@@ -1,0 +1,91 @@
+---
+// BookCard.astro - Reusable book display card with hover effects
+export interface Props {
+  title: string;
+  subtitle?: string;
+  description: string;
+  coverImage: string;
+  coverAlt: string;
+  amazonLink?: string;
+  comingSoon?: boolean;
+  releaseDate?: string;
+}
+
+const {
+  title,
+  subtitle,
+  description,
+  coverImage,
+  coverAlt,
+  amazonLink,
+  comingSoon = false,
+  releaseDate
+} = Astro.props;
+---
+
+<div class="group relative">
+  <!-- Cover Image -->
+  <div class="relative overflow-hidden rounded-lg mb-6 aspect-[3/4] bg-dark-lighter">
+    <img
+      src={coverImage}
+      alt={coverAlt}
+      class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+    />
+
+    <!-- Overlay on hover -->
+    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+      {comingSoon ? (
+        <div class="text-center">
+          <p class="text-primary-light font-semibold text-lg">COMING SOON</p>
+          {releaseDate && <p class="text-sm text-gray-300 mt-2">{releaseDate}</p>}
+        </div>
+      ) : (
+        amazonLink && (
+          <a
+            href={amazonLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-6 py-3 bg-accent hover:bg-accent-light text-white font-semibold rounded-lg transition-all transform -translate-y-2 group-hover:translate-y-0"
+          >
+            Buy Now
+          </a>
+        )
+      )}
+    </div>
+  </div>
+
+  <!-- Book Details -->
+  <div>
+    <h3 class="text-xl md:text-2xl font-heading font-bold text-cream group-hover:text-primary transition-colors">
+      {title}
+    </h3>
+
+    {subtitle && (
+      <p class="text-sm text-gray-400 italic mt-2">
+        {subtitle}
+      </p>
+    )}
+
+    <p class="text-gray-300 text-sm mt-4 leading-relaxed">
+      {description}
+    </p>
+
+    <!-- CTA Button (if not coming soon) -->
+    {!comingSoon && amazonLink && (
+      <a
+        href={amazonLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block mt-6 px-6 py-2 bg-primary hover:bg-primary-light text-dark-card font-semibold rounded-lg transition-all transform hover:translate-x-1"
+      >
+        Learn More →
+      </a>
+    )}
+
+    {comingSoon && (
+      <div class="mt-6 inline-block px-4 py-2 border border-primary-light text-primary-light rounded-lg text-sm font-semibold">
+        Coming Soon
+      </div>
+    )}
+  </div>
+</div>

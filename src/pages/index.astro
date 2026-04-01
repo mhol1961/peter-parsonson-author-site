@@ -1,0 +1,299 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import NewsletterSignup from '@components/NewsletterSignup.astro';
+---
+
+<BaseLayout
+  title="Peter P. — The Tempest Toss | Military Thriller"
+  description="The Tempest Toss by Peter P. — A military thriller built on real EMP science, Cold War history, and twenty-two years of research. Book 1 of the John Hunter Series."
+  type="website"
+>
+
+  <!-- ==========================================
+       HERO - Full-screen cinematic with book cover
+       ========================================== -->
+  <section class="relative min-h-screen flex items-center overflow-hidden scan-lines hero-cinematic">
+    <!-- Radar scope - atmospheric element behind text -->
+    <div class="absolute left-0 bottom-0 w-[500px] h-[500px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] opacity-15 z-[3] -translate-x-1/4 translate-y-1/4 pointer-events-none">
+      <div class="radar-scope w-full h-full" style="top:50%;left:50%;width:100%;height:100%;">
+        <div class="radar-crosshair-h"></div>
+        <div class="radar-sweep"></div>
+        <div class="radar-blip" style="top:25%;left:60%"></div>
+        <div class="radar-blip-2" style="bottom:30%;right:25%"></div>
+      </div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6 py-24 z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Text -->
+        <div class="text-center lg:text-left">
+          <p class="mil-text mb-4">/// Priority Transmission — Eyes Only</p>
+          <p class="animate-fade-in-up text-primary-light uppercase tracking-[0.4em] font-bold text-xs mb-8">
+            Book One &mdash; The John Hunter Series
+          </p>
+
+          <h1 class="animate-fade-in-up delay-100 font-heading font-black text-cream leading-[0.95] mb-8 text-shadow-heavy">
+            <span class="block text-6xl md:text-7xl lg:text-8xl">THE</span>
+            <span class="block text-6xl md:text-7xl lg:text-8xl">TEMPEST</span>
+            <span class="block text-6xl md:text-7xl lg:text-8xl text-accent">TOSS</span>
+          </h1>
+
+          <p class="animate-fade-in-up delay-200 text-lg md:text-xl text-white/70 mb-6 max-w-xl leading-relaxed">
+            A 1962 nuclear detonation above the Pacific. A weapon perfected in silence for sixty years. And a single day that changes everything &mdash; when the Port of Tampa erupts and a Navy SEAL Commander must hunt a threat that was hiding in plain sight.
+          </p>
+
+          <div class="animate-fade-in-up delay-300 mb-10 max-w-xl">
+            <div class="typewriter-container">
+              <p class="typewriter text-white/90 text-lg italic font-heading">
+                &ldquo;Some debts take sixty years to come due.&rdquo;
+              </p>
+            </div>
+          </div>
+
+          <div class="animate-fade-in-up delay-400 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="/books" class="btn-primary animate-pulse-glow">
+              Enter the Dark Territory
+            </a>
+            <a href="/about" class="btn-secondary">
+              Meet the Author
+            </a>
+          </div>
+          <p class="mil-text-red mt-6">Clearance: Top Secret // SCI</p>
+        </div>
+
+        <!-- Book Cover - floating -->
+        <div class="flex justify-center lg:justify-end animate-fade-in-up delay-300">
+          <div class="book-float relative z-[5]">
+            <div class="book-3d">
+              <img
+                src="/images/Front-Cover.jpg"
+                alt="The Tempest Toss by Peter P."
+                class="w-56 md:w-64 lg:w-72"
+                loading="eager"
+              />
+            </div>
+            <div class="book-shadow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <svg class="w-6 h-6 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       RED ACCENT STRIP - Like Jack Carr's site
+       ========================================== -->
+  <div class="accent-strip marquee-wrapper">
+    <span class="marquee-content">USCG Authors Program &nbsp;&bull;&nbsp; Navy SEAL Commander John Hunter &nbsp;&bull;&nbsp; The EMP Threat Is Real &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; USCG Authors Program &nbsp;&bull;&nbsp; Navy SEAL Commander John Hunter &nbsp;&bull;&nbsp; The EMP Threat Is Real &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;</span>
+  </div>
+
+  <!-- ==========================================
+       SYNOPSIS - Dark, atmospheric
+       ========================================== -->
+  <section class="py-16 md:py-20 section-dark relative grain-overlay section-fade-to-card">
+    <div class="relative max-w-4xl mx-auto px-6 z-10">
+      <div class="text-center mb-8 fade-in-up">
+        <div class="teal-divider mx-auto mb-6"></div>
+        <p class="section-label">Mission Briefing</p>
+        <h2 class="text-cream mb-6">A Sixty-Year Conspiracy</h2>
+      </div>
+
+      <div class="space-y-6 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto fade-in-up">
+        <p class="text-white/90">
+          In 1962, a nuclear explosion over the Pacific disables every circuit on a Soviet spy ship. The Americans call their discovery Tempest and spend the next sixty years developing it into a weapon.
+        </p>
+        <p class="text-white/80">
+          By 2022, a terrorist attack devastates the Port of Tampa, killing six thousand Americans. Navy SEAL Commander John Hunter narrowly escapes. What he uncovers in the aftermath suggests a conspiracy much deeper than anyone in Washington cares to acknowledge.
+        </p>
+        <p class="text-white/60 italic">
+          Meanwhile, somewhere in the Gulf of Mexico, a Chinese freighter is running dark. Two nuclear missiles. One traitor already inside the wire.
+        </p>
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="/books" class="btn-primary">Read More About the Book</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       NEWSLETTER
+       ========================================== -->
+  <section class="py-14 section-card border-y border-white/5 section-fade-to-dark">
+    <div class="max-w-2xl mx-auto px-6 text-center fade-in-up">
+      <p class="section-label">Join the Network</p>
+      <h3 class="text-2xl md:text-3xl text-cream mb-4">Get Notified About New Releases</h3>
+      <p class="text-gray-400 mb-8">
+        Join the mailing list for exclusive content, release announcements, and behind-the-scenes updates.
+      </p>
+      <div class="max-w-md mx-auto">
+        <NewsletterSignup />
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       ABOUT PREVIEW - Dramatic split
+       ========================================== -->
+  <section class="py-16 md:py-20 section-dark section-fade-to-darker">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-5 gap-16 items-center">
+        <!-- Author Photo / Placeholder -->
+        <div class="md:col-span-2 fade-in-left">
+          <div class="aspect-[3/4] rounded-sm overflow-hidden relative" style="background: linear-gradient(135deg, rgba(13,148,136,0.2), rgba(220,38,38,0.1));">
+            <img
+              src="/images/pete-author-image.png"
+              alt="Peter P."
+              class="w-full h-full object-cover"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          </div>
+        </div>
+
+        <!-- Bio Text -->
+        <div class="md:col-span-3 fade-in-right">
+          <div class="teal-divider mb-8"></div>
+          <p class="section-label">Operative Profile</p>
+          <h2 class="text-cream mb-8">Peter P.</h2>
+
+          <p class="text-white/80 text-lg leading-relaxed mb-6">
+            Peter P. spent twenty-two years researching and writing The Tempest Toss, drawing on the United States Coast Guard's Authors Program, declassified Cold War history, and a scientist's insistence on getting the physics right.
+          </p>
+          <p class="text-white/60 leading-relaxed mb-10">
+            A chemist with a Master of Science from Georgia Tech, he brought the same rigor to the EMP threat that he has spent thirty years applying to complex technical problems. He lives in Texas &mdash; close enough to the border to watch the real war being fought there, and close enough to the truth to know what fiction can say that the official record cannot.
+          </p>
+
+          <a href="/about" class="btn-secondary">Read Full Bio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SERIES PREVIEW - Book grid
+       ========================================== -->
+  <section class="py-16 md:py-20 section-darker relative grain-overlay">
+    <div class="relative max-w-7xl mx-auto px-6 z-10">
+      <div class="text-center mb-8 fade-in-up">
+        <div class="teal-divider mx-auto mb-6"></div>
+        <p class="section-label">Operations Dossier</p>
+        <p class="text-primary-light uppercase tracking-[0.3em] font-bold text-xs mb-4">Five Books. One Mission.</p>
+        <h2 class="text-cream">The John Hunter Series</h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 fade-in-up">
+        <!-- Book 1 -->
+        <a href="/books" class="group block">
+          <div class="relative overflow-hidden mb-4">
+            <span class="absolute top-2 right-3 font-heading font-bold text-white/[0.07] z-0" style="font-size: 3rem;">01</span>
+            <img
+              src="/images/Front-Cover.jpg"
+              alt="The Tempest Toss"
+              class="w-full aspect-[2/3] object-cover transition-transform duration-500 group-hover:scale-105 relative z-[1]"
+              loading="lazy"
+            />
+            <div class="absolute top-3 right-3 px-2 py-1 bg-accent text-white text-[10px] font-bold uppercase tracking-wider z-[2]">
+              Coming 2026
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-[2]"></div>
+          </div>
+          <p class="text-[10px] text-primary uppercase tracking-[0.2em] font-bold">Protocol 01</p>
+          <h4 class="text-base font-heading font-bold text-cream group-hover:text-accent transition-colors">The Tempest Toss</h4>
+        </a>
+
+        {[2, 3, 4, 5].map((num) => (
+          <div class="group block">
+            <div class="relative overflow-hidden mb-4 aspect-[2/3] flex items-center justify-center" style="background: linear-gradient(160deg, #141b2d 0%, #0a0e1a 100%); border: 1px solid rgba(255,255,255,0.05);">
+              <span class="absolute top-2 right-3 font-heading font-bold text-white/[0.07]" style="font-size: 3rem;">0{num}</span>
+              <div class="text-center relative z-[1]">
+                <span class="text-5xl font-heading font-black text-white/5">{num}</span>
+                <p class="text-[10px] text-gray-600 uppercase tracking-[0.3em] mt-2">{num <= 3 ? 'Coming Soon' : 'Classified'}</p>
+              </div>
+              {num > 3 && (
+                <div class="absolute inset-0 flex items-center justify-center z-[2]">
+                  <span class="text-white/[0.04] text-2xl font-bold uppercase tracking-[0.3em] -rotate-[30deg]">Classified</span>
+                </div>
+              )}
+            </div>
+            <p class="text-[10px] text-primary/60 uppercase tracking-[0.2em] font-bold">Protocol 0{num}</p>
+            <h4 class="text-base font-heading font-bold text-gray-600">{num === 2 ? 'Coming 2027' : 'TBA'}</h4>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/books" class="btn-teal">View All Books</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       ENDORSEMENTS / ATMOSPHERIC QUOTES
+       ========================================== -->
+  <section class="py-16 md:py-20 section-card border-y border-white/5">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="fade-in-up">
+          <p class="text-xl md:text-2xl italic font-heading text-cream leading-relaxed mb-6">
+            &ldquo;For those rough men and women &mdash; past, present, and future &mdash; who stand the watch so the rest of us never have to.&rdquo;
+          </p>
+          <p class="text-sm text-gray-400 uppercase tracking-widest font-bold">&mdash; Peter Parsonson, Dedication</p>
+        </div>
+        <div class="fade-in-up stagger-2">
+          <p class="text-xl md:text-2xl italic font-heading text-cream leading-relaxed mb-6">
+            &ldquo;People sleep peaceably in their beds at night only because rough men stand ready to do violence on their behalf.&rdquo;
+          </p>
+          <p class="text-sm text-gray-400 uppercase tracking-widest font-bold">&mdash; George Orwell (attributed)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       BLOG PREVIEW
+       ========================================== -->
+  <section class="py-16 md:py-20 section-dark">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-8 fade-in-up">
+        <div class="teal-divider mx-auto mb-6"></div>
+        <p class="section-label">Field Dispatches</p>
+        <h2 class="text-cream">Latest Articles</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {[
+          { sector: 'SECTOR: CRAFT', title: 'Getting the Physics Right', desc: 'How twenty-two years of research and a chemistry background shaped every technical detail in The Tempest Toss.', img: '/images/getting-the-physics-right-latest-articles.png' },
+          { sector: 'SECTOR: RECON', title: 'The EMP Threat Is Real', desc: 'Declassified Cold War history and why electromagnetic pulse weapons remain one of the most underappreciated threats.', img: '/images/the-emp-threat-is-real-article-latest.png' },
+          { sector: 'SECTOR: INTEL', title: 'Why Fiction Says What the Record Cannot', desc: 'On the power of military fiction to tell truths that official records won\'t — and why that matters now.', img: '/images/why-fiction-says-what-the-record-cant.png' }
+        ].map((post, i) => (
+          <article class="group border border-white/5 hover:border-primary/30 transition-all duration-300 bg-dark-card/50 fade-in-up" style={`transition-delay: ${i * 0.1}s`}>
+            <div class="aspect-video overflow-hidden">
+              <img src={post.img} alt={post.title} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6 md:p-8">
+              <span class="sector-tag mb-3">{post.sector}</span>
+              <h3 class="text-xl font-heading font-bold text-cream mb-3 group-hover:text-primary-light transition-colors">{post.title}</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-6">{post.desc}</p>
+              <span class="text-white/50 text-xs uppercase tracking-[0.2em] font-bold group-hover:text-primary-light transition-colors">
+                Read More &rarr;
+              </span>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="/blog" class="btn-secondary">View All Articles</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

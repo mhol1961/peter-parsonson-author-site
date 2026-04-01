@@ -1,0 +1,83 @@
+---
+// BaseLayout.astro - Main layout with header, footer, and SEO
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import SEOHead from '@components/SEOHead.astro';
+import '@styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  canonical?: string;
+  type?: 'website' | 'article' | 'book' | 'person';
+  author?: string;
+  publishDate?: string;
+}
+
+const {
+  title,
+  description,
+  ogImage,
+  canonical,
+  type = 'website',
+  author,
+  publishDate
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <SEOHead
+    {title}
+    {description}
+    {ogImage}
+    {canonical}
+    {type}
+    {author}
+    {publishDate}
+  />
+  <body>
+    <a href="#main" class="sr-only focus:not-sr-only">
+      Skip to main content
+    </a>
+    <Header />
+
+    <main id="main" class="min-h-screen">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <!-- Scroll animations + parallax -->
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            if (entry.target.classList.contains('book-3d')) {
+              entry.target.classList.add('revealed');
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .year-marker, .book-3d').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Lightweight parallax
+      const parallaxElements = document.querySelectorAll('[data-parallax]');
+      if (parallaxElements.length > 0) {
+        window.addEventListener('scroll', () => {
+          const scrollY = window.scrollY;
+          parallaxElements.forEach(el => {
+            const speed = parseFloat(el.dataset.parallax);
+            el.style.transform = `translateY(${scrollY * speed}px)`;
+          });
+        }, { passive: true });
+      }
+    </script>
+  </body>
+</html>

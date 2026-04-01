@@ -1,0 +1,292 @@
+---
+// Blog page
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Field Dispatches — Peter P. Author Blog"
+  description="Research notes, behind-the-scenes intel, and updates on the John Hunter Series from military thriller author Peter P."
+  type="website"
+>
+  <!-- Hero Section - Military Communications Terminal -->
+  <section class="section-darker relative overflow-hidden" style="min-height: 60vh; display: flex; align-items: center; background-image: linear-gradient(135deg, rgba(10, 14, 26, 0.88) 0%, rgba(6, 10, 20, 0.85) 100%), url('/images/blog-hero-bg.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <!-- Grid pattern background -->
+    <div class="absolute inset-0 z-0" style="background: linear-gradient(rgba(13, 148, 136, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(13, 148, 136, 0.03) 1px, transparent 1px); background-size: 40px 40px;"></div>
+    <!-- Red grid overlay -->
+    <div class="absolute inset-0 opacity-10 z-0" style="background-image: linear-gradient(0deg, transparent 24%, rgba(220, 38, 38, 0.05) 25%, rgba(220, 38, 38, 0.05) 26%, transparent 27%, transparent 74%, rgba(220, 38, 38, 0.05) 75%, rgba(220, 38, 38, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(220, 38, 38, 0.05) 25%, rgba(220, 38, 38, 0.05) 26%, transparent 27%, transparent 74%, rgba(220, 38, 38, 0.05) 75%, rgba(220, 38, 38, 0.05) 76%, transparent 77%, transparent); background-size: 80px 80px;"></div>
+    <!-- Scan lines -->
+    <div class="scan-lines absolute inset-0 z-0"></div>
+    <!-- Gradient overlay -->
+    <div class="absolute inset-0 z-0" style="background: linear-gradient(180deg, rgba(6, 10, 20, 0.8) 0%, rgba(10, 14, 26, 0.95) 100%);"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 py-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Left: Heading -->
+        <div>
+          <div class="teal-divider mb-6"></div>
+          <p class="section-label">Field Dispatches</p>
+          <h1 class="font-heading font-black text-cream leading-[0.95] mb-6 text-shadow-heavy">
+            <span class="block text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter">Latest</span>
+            <span class="block text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-accent">Articles</span>
+          </h1>
+          <p class="text-xl text-gray-300 max-w-xl leading-relaxed">
+            Transmissions from the author's desk &mdash; research notes, behind-the-scenes intel, and updates on the John Hunter Series.
+          </p>
+        </div>
+
+        <!-- Right: Dispatch Terminal -->
+        <div class="flex justify-center lg:justify-end">
+          <div class="dispatch-terminal w-full lg:max-w-[360px]">
+            <div class="live-indicator">
+              <span class="live-dot"></span>
+              <span class="live-text">LIVE</span>
+            </div>
+            <div class="dispatch-terminal-header">/// Incoming Transmissions</div>
+            <div class="dispatch-ticker-wrapper">
+              <div class="dispatch-ticker">
+                <div class="dispatch-item">
+                  <span class="dispatch-timestamp">2026.03.15 — 0800Z</span>
+                  The Art of Writing Authentic Military Fiction
+                </div>
+                <div class="dispatch-item">
+                  <span class="dispatch-timestamp">2026.02.28 — 1200Z</span>
+                  Behind the Research: Creating Authentic Operations
+                </div>
+                <div class="dispatch-item">
+                  <span class="dispatch-timestamp">2026.02.10 — 0600Z</span>
+                  Character Development in High-Stakes Situations
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="mil-text mt-3 text-center lg:text-right">Comms Protocol: Secure // Encrypted</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider Strip -->
+  <div class="accent-strip"></div>
+
+  <!-- Featured Article Section -->
+  <section class="section-dark py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-12 items-start">
+        <!-- Featured Image -->
+        <div class="md:col-span-1 relative">
+          <div class="aspect-square border-2 border-red-600/30 overflow-hidden mb-4">
+            <img src="/images/the-art-of-writing-military-fiction-article.png" alt="The Art of Writing Authentic Military Fiction" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Featured Content -->
+        <div class="md:col-span-2">
+          <div class="inline-flex items-center gap-2 mb-4">
+            <span class="sector-tag">SECTOR: CRAFT</span>
+            <span class="text-xs uppercase tracking-widest text-gray-500 font-bold ml-2">Featured</span>
+          </div>
+
+          <h2 class="text-5xl font-black uppercase tracking-tighter text-cream mb-4">
+            The Art of Writing Authentic Military Fiction
+          </h2>
+
+          <p class="text-gray-400 text-sm uppercase tracking-widest mb-6 font-semibold">March 15, 2026 • 12 MIN READ</p>
+
+          <p class="text-gray-300 text-lg leading-relaxed mb-8">
+            What does it take to write military fiction that actually feels real? In this comprehensive essay, I explore the research methodology, the interviews, and the creative decisions that go into crafting stories that respect both authenticity and narrative power. From Cold War declassified documents to conversations with operators who've been on the tip of the spear — this is how fiction becomes a weapon.
+          </p>
+
+          <a
+            href="#"
+            class="btn-primary hover:shadow-lg hover:shadow-red-600/50"
+          >
+            Read Full Article
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Grid Section -->
+  <section class="section-darker py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-12">
+        <p class="section-label">Field Dispatches</p>
+        <h2 class="text-4xl font-black uppercase tracking-tighter text-cream mb-4">
+          All Articles
+        </h2>
+        <div class="h-1 w-16 bg-red-600"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Article 1 -->
+        <article class="section-card border border-red-600/30 overflow-hidden hover:border-red-600/60 transition-all duration-300 group flex flex-col fade-in-up" style="transition-delay: 0s">
+          <div class="aspect-video overflow-hidden relative border-b border-red-600/20">
+            <img src="/images/behind-the-research-creating-authentic-operations-article.png" alt="Behind the Research: Creating Authentic Operations" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="sector-tag">SECTOR: CRAFT</span>
+              <span class="text-gray-600">•</span>
+              <span class="text-xs text-gray-500">5 min read</span>
+            </div>
+            <h3 class="text-2xl font-black uppercase tracking-tight text-cream mb-3 group-hover:text-red-500 transition-colors">
+              Behind the Research: Creating Authentic Operations
+            </h3>
+            <p class="text-gray-300 text-sm leading-relaxed flex-1 mb-6">
+              A deep dive into the research process behind one of the key operations in the novel, including declassified briefs, interviews with military professionals, and the technical resources that shaped accuracy.
+            </p>
+            <a href="#" class="inline-flex items-center gap-2 text-red-500 hover:text-red-400 transition-colors font-black uppercase text-xs tracking-wider">
+              Read More <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="section-card border border-teal-600/30 overflow-hidden hover:border-teal-600/60 transition-all duration-300 group flex flex-col fade-in-up" style="transition-delay: 0.1s">
+          <div class="aspect-video overflow-hidden relative border-b border-teal-600/20">
+            <img src="/images/character-developme%20nt-in-high-stakes-situations-article.png" alt="Character Development in High-Stakes Situations" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="sector-tag">SECTOR: OPS</span>
+              <span class="text-gray-600">•</span>
+              <span class="text-xs text-gray-500">7 min read</span>
+            </div>
+            <h3 class="text-2xl font-black uppercase tracking-tight text-cream mb-3 group-hover:text-teal-400 transition-colors">
+              Character Development in High-Stakes Situations
+            </h3>
+            <p class="text-gray-300 text-sm leading-relaxed flex-1 mb-6">
+              How do you create believable character arcs when your protagonist is facing extraordinary circumstances? Exploring techniques and pitfalls in character development for novels that matter.
+            </p>
+            <a href="#" class="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors font-black uppercase text-xs tracking-wider">
+              Read More <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="section-card border border-red-600/30 overflow-hidden hover:border-red-600/60 transition-all duration-300 group flex flex-col fade-in-up" style="transition-delay: 0.2s">
+          <div class="aspect-video overflow-hidden relative border-b border-red-600/20">
+            <img src="/images/pacing-your-thriller-creating-tension-without-exhaustion-article.png" alt="Pacing Your Thriller: Creating Tension Without Exhaustion" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="sector-tag">SECTOR: CRAFT</span>
+              <span class="text-gray-600">•</span>
+              <span class="text-xs text-gray-500">6 min read</span>
+            </div>
+            <h3 class="text-2xl font-black uppercase tracking-tight text-cream mb-3 group-hover:text-red-500 transition-colors">
+              Pacing Your Thriller: Creating Tension Without Exhaustion
+            </h3>
+            <p class="text-gray-300 text-sm leading-relaxed flex-1 mb-6">
+              Readers want to feel the adrenaline, but they also need moments to breathe. Learn how to structure a thriller's pacing for maximum impact and reader satisfaction across all 400+ pages.
+            </p>
+            <a href="#" class="inline-flex items-center gap-2 text-red-500 hover:text-red-400 transition-colors font-black uppercase text-xs tracking-wider">
+              Read More <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="section-card border border-teal-600/30 overflow-hidden hover:border-teal-600/60 transition-all duration-300 group flex flex-col fade-in-up" style="transition-delay: 0.3s">
+          <div class="aspect-video overflow-hidden relative border-b border-teal-600/20">
+            <img src="/images/the-responsibility-of-writing-about-service-article.png" alt="The Responsibility of Writing About Service" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="p-8 flex-1 flex flex-col">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="sector-tag">SECTOR: INTEL</span>
+              <span class="text-gray-600">•</span>
+              <span class="text-xs text-gray-500">8 min read</span>
+            </div>
+            <h3 class="text-2xl font-black uppercase tracking-tight text-cream mb-3 group-hover:text-teal-400 transition-colors">
+              The Responsibility of Writing About Service
+            </h3>
+            <p class="text-gray-300 text-sm leading-relaxed flex-1 mb-6">
+              Military fiction carries weight. How do we honor the experiences of those who serve while still crafting narratives that matter? Thoughts on research ethics and responsible representation.
+            </p>
+            <a href="#" class="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors font-black uppercase text-xs tracking-wider">
+              Read More <span>→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Load More -->
+      <div class="mt-10 text-center">
+        <button class="btn-secondary hover:shadow-lg hover:shadow-teal-600/30">
+          Load More Articles
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories & Tags Section -->
+  <section class="section-dark py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Categories -->
+        <div>
+          <h3 class="text-2xl font-black uppercase tracking-tight text-cream mb-6 pb-3 border-b-2 border-red-600">
+            Categories
+          </h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-400 hover:text-red-500 transition-colors uppercase text-sm tracking-wider font-semibold">Writing Craft (8)</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-red-500 transition-colors uppercase text-sm tracking-wider font-semibold">Military Operations (5)</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-red-500 transition-colors uppercase text-sm tracking-wider font-semibold">Research & Interviews (6)</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-red-500 transition-colors uppercase text-sm tracking-wider font-semibold">Character Development (4)</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-red-500 transition-colors uppercase text-sm tracking-wider font-semibold">Publishing Journey (3)</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-red-500 transition-colors uppercase text-sm tracking-wider font-semibold">Personal (2)</a></li>
+          </ul>
+        </div>
+
+        <!-- Popular Tags -->
+        <div>
+          <h3 class="text-2xl font-black uppercase tracking-tight text-cream mb-6 pb-3 border-b-2 border-teal-600">
+            Popular Tags
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <a href="#" class="inline-block px-4 py-2 bg-red-600/10 border border-red-600/30 hover:border-red-600/60 text-cream hover:text-red-400 uppercase text-xs font-black tracking-wider transition-all">
+              #THRILLER
+            </a>
+            <a href="#" class="inline-block px-4 py-2 bg-teal-600/10 border border-teal-600/30 hover:border-teal-600/60 text-cream hover:text-teal-400 uppercase text-xs font-black tracking-wider transition-all">
+              #MILITARY
+            </a>
+            <a href="#" class="inline-block px-4 py-2 bg-red-600/10 border border-red-600/30 hover:border-red-600/60 text-cream hover:text-red-400 uppercase text-xs font-black tracking-wider transition-all">
+              #WRITING
+            </a>
+            <a href="#" class="inline-block px-4 py-2 bg-teal-600/10 border border-teal-600/30 hover:border-teal-600/60 text-cream hover:text-teal-400 uppercase text-xs font-black tracking-wider transition-all">
+              #FICTION
+            </a>
+            <a href="#" class="inline-block px-4 py-2 bg-red-600/10 border border-red-600/30 hover:border-red-600/60 text-cream hover:text-red-400 uppercase text-xs font-black tracking-wider transition-all">
+              #CRAFT
+            </a>
+            <a href="#" class="inline-block px-4 py-2 bg-teal-600/10 border border-teal-600/30 hover:border-teal-600/60 text-cream hover:text-teal-400 uppercase text-xs font-black tracking-wider transition-all">
+              #AUTHOR
+            </a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h3 class="text-2xl font-black uppercase tracking-tight text-cream mb-6 pb-3 border-b-2 border-red-600">
+            Newsletter
+          </h3>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+            Get new articles and writing insights delivered to your inbox. Weekly deep dives into military fiction, craft, and storytelling.
+          </p>
+          <div class="flex flex-col gap-3">
+            <input
+              type="email"
+              placeholder="Your email"
+              class="w-full px-4 py-3 bg-dark-card border border-white/15 text-cream placeholder-gray-600 uppercase text-xs tracking-wider font-semibold focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600/30 transition-all"
+            />
+            <button class="btn-primary hover:shadow-lg hover:shadow-red-600/50">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

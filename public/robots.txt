@@ -1,0 +1,12 @@
+# robots.txt for Peter Parsonson Author Website
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://peterparsonson.com/sitemap-index.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1

@@ -1,0 +1,260 @@
+---
+// About page - Peter P. author biography
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About Peter P. — Scientist, Researcher, Thriller Writer"
+  description="Peter Parsonson spent 22 years researching The Tempest Toss. A Georgia Tech chemist who wrote to Tom Clancy, a former KGB general, and the USCG Authors Program to get the details right."
+  type="person"
+>
+  <!-- Hero Section - Author Showcase -->
+  <section class="section-darker relative overflow-hidden scan-lines grid-overlay about-hero" style="min-height: 80vh; display: flex; align-items: center;">
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 py-20">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Left: Author Photo -->
+        <div class="flex justify-center lg:justify-start">
+          <div class="w-full max-w-md">
+            <img
+              src="/images/pete-author-image.png"
+              alt="Peter P. — military thriller author"
+              class="w-full aspect-[3/4] object-cover author-hero-img"
+              loading="eager"
+            />
+          </div>
+        </div>
+
+        <!-- Right: Heading + CTA -->
+        <div>
+          <div class="teal-divider mb-6"></div>
+          <p class="section-label">Operative Profile</p>
+          <h1 class="font-heading font-black text-cream leading-[0.95] mb-8 text-shadow-heavy">
+            <span class="block text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter">The Writer</span>
+            <span class="block text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter">Behind the</span>
+            <span class="block text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-accent">Threat</span>
+          </h1>
+          <p class="section-label mb-2">Scientist. Researcher. Thriller Writer.</p>
+          <p class="text-xl text-gray-300 max-w-xl leading-relaxed mb-10">
+            Twenty-two years of research. Real science. Real operations. A thriller that took that long because the truth it tells needed that long to uncover.
+          </p>
+          <a href="#bio" class="btn-secondary">
+            Read Full Bio
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider Strip -->
+  <div class="accent-strip"></div>
+
+  <!-- Main Bio Section -->
+  <section id="bio" class="section-dark py-16 md:py-20 overflow-visible">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-16">
+        <!-- Quick Facts Sidebar - Sticky -->
+        <div class="md:col-span-1">
+          <div class="sticky top-24">
+            <p class="mil-text mb-4">Personnel Dossier — Eyes Only</p>
+            <!-- Pull Quote -->
+            <div class="mb-8 p-6 border-l-[3px]" style="border-color: #0D9488; background: rgba(13, 148, 136, 0.05);">
+              <p class="text-lg italic text-cream leading-relaxed font-heading">
+                &ldquo;Some truths are too dangerous for official reports. Fiction can go where the record cannot.&rdquo;
+              </p>
+              <p class="text-sm mt-4 uppercase tracking-widest font-bold" style="color: #0D9488;">&mdash; Peter P.</p>
+            </div>
+
+            <!-- Quick Facts Cards -->
+            <div class="space-y-4">
+              <div class="section-card p-5 border-l-4 border-red-600 fade-in-up">
+                <p class="text-xs uppercase tracking-widest text-red-500 font-black mb-2">Education</p>
+                <p class="text-cream text-sm leading-tight">M.S. Chemistry<br/>Georgia Institute of Technology</p>
+                <p class="text-gray-500 text-xs mt-2 italic">Three decades of scientific rigor applied to the page</p>
+              </div>
+              <div class="section-card p-5 border-l-4 border-teal-600 fade-in-up stagger-1">
+                <p class="text-xs uppercase tracking-widest text-teal-400 font-black mb-2">22 Years of Research</p>
+                <p class="text-cream text-sm leading-tight">From declassified Cold War archives to modern EMP threat assessments</p>
+              </div>
+              <div class="section-card p-5 border-l-4 border-red-600 fade-in-up stagger-2">
+                <p class="text-xs uppercase tracking-widest text-red-500 font-black mb-2">Tom Clancy Connection</p>
+                <p class="text-cream text-sm leading-tight">Clancy personally replied and directed Pete to the USCG Authors Program</p>
+              </div>
+              <div class="section-card p-5 border-l-4 border-teal-600 fade-in-up stagger-3">
+                <p class="text-xs uppercase tracking-widest text-teal-400 font-black mb-2">USCG Authors Program</p>
+                <p class="text-cream text-sm leading-tight">Embedded research program for operational authenticity</p>
+              </div>
+              <div class="section-card p-5 border-l-4 border-red-600 fade-in-up stagger-4">
+                <p class="text-xs uppercase tracking-widest text-red-500 font-black mb-2">Congressional EMP Commission</p>
+                <p class="text-cream text-sm leading-tight">The real-world science behind the fiction</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bio Text - Main Column -->
+        <div class="md:col-span-2">
+          <p class="section-label">Background Dossier</p>
+          <h2 class="text-5xl md:text-5xl font-black uppercase tracking-tighter text-cream mb-8">
+            The Full Story
+          </h2>
+
+          <div class="space-y-6 text-gray-300 leading-relaxed text-lg">
+            <p>
+              Peter Parsonson spent twenty-two years writing The Tempest Toss. It survived 9/11, career changes, cross-country moves, and enough rewrites to fill a classified archive. The result is a thriller built on real science, real operations, and the kind of research that sometimes makes people uncomfortable.
+            </p>
+            <p>
+              A chemist by training &mdash; Master of Science, Georgia Institute of Technology &mdash; Pete spent thirty years applying scientific rigor to complex technical problems. When he turned that same discipline to fiction, he didn't guess at the details. He went to the sources. He wrote to a former senior KGB general to ask about nuclear weapons pre-positioned in Washington, D.C. He emailed Tom Clancy for research advice &mdash; and Clancy wrote back personally, pointing him toward the U.S. Coast Guard Authors Program, which became a cornerstone of the book's authenticity.
+            </p>
+            <p>
+              The Tempest Toss is grounded in declassified Cold War history, the real science of electromagnetic pulse weapons, and findings from the Congressional EMP Commission &mdash; whose 2018 report concluded that a high-altitude nuclear EMP could kill up to 90% of the American population within twelve months. Pete didn't invent the threat. He gave it a story.
+            </p>
+            <p>
+              He lives in Texas, close to the border. Close enough to the truth to know what fiction can say that the official record cannot.
+            </p>
+          </div>
+
+          <!-- The Research Deep Dive -->
+          <div class="mt-12 section-card border border-red-600/30 p-8">
+            <h3 class="text-3xl font-black uppercase tracking-tighter text-cream mb-6">
+              How Fiction Became Research
+            </h3>
+
+            <div class="space-y-5 text-gray-300">
+              <p>
+                The Tempest Toss didn't start as a novel. It started as a question: What would happen if the electromagnetic pulse weapons developed during the Cold War fell into the wrong hands? The question wasn't theoretical. The weapons were real. The threat was documented. The only thing missing was the human story.
+              </p>
+
+              <p>
+                That question led Peter down a two-decade rabbit hole of declassified documents, classified briefings, physics research, and conversations with people who understand the threat that most Americans have never heard discussed in public. The result is a thriller grounded in real science because Peter believes that readers of serious fiction deserve stories that respect their intelligence.
+              </p>
+
+              <p>
+                His background as a chemist and thirty years of experience solving complex technical problems gave him the analytical tools to understand the weapons science. The USCG Authors Program gave him the framework to turn that understanding into narrative that matters. The result is a book where every technical detail, every operational procedure, every consequence is built on something real.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writing Approach Section -->
+  <section class="section-darker py-16 md:py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-5xl font-black uppercase tracking-tighter text-cream mb-4 text-center">
+        Writing Approach
+      </h2>
+      <div class="h-1 w-20 bg-red-600 mx-auto mb-16"></div>
+
+      <div class="space-y-8">
+        <!-- Approach 1 -->
+        <div class="section-card border-t-4 border-red-600 p-8 pl-8 fade-in-up">
+          <h3 class="text-2xl font-black uppercase tracking-wider text-cream mb-4">
+            Get the Science Right
+          </h3>
+          <p class="text-gray-300 leading-relaxed">
+            Every technical detail in The Tempest Toss is grounded in real physics and declassified research. Peter brings a chemist's precision to the EMP threat, weapons systems, and military operations described in his novels. If it's in the book, it's based on something real. That's not negotiable.
+          </p>
+        </div>
+
+        <!-- Approach 2 -->
+        <div class="section-card border-t-4 border-teal-600 p-8 pl-8 fade-in-up">
+          <h3 class="text-2xl font-black uppercase tracking-wider text-cream mb-4">
+            Fiction as Truth-Telling
+          </h3>
+          <p class="text-gray-300 leading-relaxed">
+            Some truths are too dangerous, too politically inconvenient, or too classified for official reports. Fiction can go where the official record cannot — exploring the human consequences of programs that exist but are never discussed, geopolitical games that shape history, and the conspiracies that thrive in the gaps between what governments say and what they do.
+          </p>
+        </div>
+
+        <!-- Approach 3 -->
+        <div class="section-card border-t-4 border-red-600 p-8 pl-8 fade-in-up">
+          <h3 class="text-2xl font-black uppercase tracking-wider text-cream mb-4">
+            Characters First, Weapons Second
+          </h3>
+          <p class="text-gray-300 leading-relaxed">
+            Technology and conspiracy drive the plot, but John Hunter drives the story. Peter writes characters who feel real because the best thriller isn't about the weapon — it's about the person who has to stop it, and what it costs them to do what must be done.
+          </p>
+        </div>
+
+        <!-- Approach 4 -->
+        <div class="section-card border-t-4 border-teal-600 p-8 pl-8 fade-in-up">
+          <h3 class="text-2xl font-black uppercase tracking-wider text-cream mb-4">
+            Twenty-Two Years of Patience
+          </h3>
+          <p class="text-gray-300 leading-relaxed">
+            Most thriller writers research for months. Peter researched for over two decades. That patience shows in every scene, every briefing, every operational detail. The depth and authenticity that readers find on every page couldn't have been written any faster because the truth it tells took that long to uncover.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USCG Authors Program Section -->
+  <section class="section-dark py-16 md:py-20 relative">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="section-card border-l-8 border-red-600 p-10 md:p-16 fade-in-up">
+        <div class="mb-4 flex items-center gap-3">
+          <div class="h-1 w-12 bg-teal-600"></div>
+          <p class="text-xs uppercase tracking-widest text-teal-400 font-black">Official Recognition</p>
+        </div>
+
+        <h2 class="text-5xl font-black uppercase tracking-tighter text-cream mb-6">
+          USCG Authors Program
+        </h2>
+
+        <p class="text-gray-300 text-lg leading-relaxed max-w-2xl mb-6">
+          Peter P. is a member of the United States Coast Guard's Authors Program, which supports and recognizes authors whose work draws on military themes, operational history, and the lived experience of service. The program provided both the framework and the credibility for turning twenty-two years of research into a novel that matters.
+        </p>
+
+        <p class="text-gray-400 text-base">
+          The USCG Authors Program validates that The Tempest Toss meets the highest standards for authenticity, accuracy, and responsible treatment of military operations and national security themes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Press & Speaking CTA -->
+  <section class="section-darker py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-5xl font-black uppercase tracking-tighter text-cream mb-4 text-center">
+        Press & Speaking
+      </h2>
+      <div class="h-1 w-20 bg-red-600 mx-auto mb-16"></div>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-12">
+        <!-- Speaking -->
+        <div class="section-card border-l-8 border-teal-600 p-8 fade-in-up">
+          <h3 class="text-2xl font-black uppercase tracking-wider text-cream mb-4">Speaking Engagements</h3>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Peter is available for book clubs, writing conferences, military events, and media appearances. He speaks on topics including EMP threats, the craft of military fiction, declassified history, and the power of fiction to tell truths that official records cannot.
+          </p>
+          <p class="text-gray-400 text-sm">
+            Virtual or in-person • Flexible scheduling • Customizable topics
+          </p>
+        </div>
+
+        <!-- Press -->
+        <div class="section-card border-l-8 border-red-600 p-8 fade-in-up">
+          <h3 class="text-2xl font-black uppercase tracking-wider text-cream mb-4">Press & Media</h3>
+          <p class="text-gray-300 leading-relaxed mb-4">
+            Journalists and media inquiries are welcome. Suggested interview topics include the twenty-two year research journey, why the EMP threat matters, how a chemist became a thriller writer, and the John Hunter Series roadmap.
+          </p>
+          <p class="text-gray-400 text-sm">
+            Press kit available • Interview-ready • Timely subject matter
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a
+          href="/contact"
+          class="btn-primary hover:shadow-lg hover:shadow-red-600/50"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
