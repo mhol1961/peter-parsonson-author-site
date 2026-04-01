@@ -1,6 +1,7 @@
 ---
 // About page - Peter P. author biography
 import BaseLayout from '@layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -11,7 +12,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
   <!-- Hero Section - Author Showcase -->
   <section class="relative overflow-hidden scan-lines grid-overlay" style="min-height: 80vh; display: flex; align-items: center; background: #060a14;">
     <!-- Intelligence room background at low opacity -->
-    <div class="absolute inset-0 z-0 opacity-[0.28]" style="background-image: url('/images/about-page-bg.png'); background-size: cover; background-position: center center;"></div>
+    <div class="absolute inset-0 z-0 opacity-[0.28]" style={`background-image: url('${base}/images/about-page-bg.png'); background-size: cover; background-position: center center;`}></div>
     <!-- Dark overlay — keeps Pete dominant, adds warm atmosphere -->
     <div class="absolute inset-0 z-0" style="background: linear-gradient(90deg, rgba(10,14,26,0.3) 0%, rgba(10,14,26,0.55) 40%, rgba(10,14,26,0.4) 70%, rgba(10,14,26,0.2) 100%), linear-gradient(180deg, rgba(10,14,26,0.5) 0%, transparent 20%, transparent 80%, rgba(10,14,26,0.7) 100%);"></div>
 
@@ -21,7 +22,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         <div class="flex justify-center lg:justify-start">
           <div class="w-full max-w-md">
             <img
-              src="/images/pete-author-image.png"
+              src={`${base}/images/pete-author-image.png`}
               alt="Peter P. — military thriller author"
               class="w-full aspect-[3/4] object-cover author-hero-img"
               loading="eager"
@@ -253,7 +254,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 
       <div class="text-center">
         <a
-          href="/contact"
+          href={`${base}/contact`}
           class="btn-primary hover:shadow-lg hover:shadow-red-600/50"
         >
           Get in Touch

@@ -1,16 +1,17 @@
 ---
+const base = import.meta.env.BASE_URL;
 const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Books', href: '/books' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '/contact' }
+  { label: 'Home', href: base },
+  { label: 'About', href: `${base}/about` },
+  { label: 'Books', href: `${base}/books` },
+  { label: 'Blog', href: `${base}/blog` },
+  { label: 'Contact', href: `${base}/contact` }
 ];
 ---
 
 <!-- Top accent strip -->
 <div class="accent-strip hidden md:block">
-  <a href="/books" class="hover:text-gray-200 transition-colors">
+  <a href={`${base}/books`} class="hover:text-gray-200 transition-colors">
     THE TEMPEST TOSS — COMING SUMMER 2026
   </a>
 </div>
@@ -18,7 +19,7 @@ const navLinks = [
 <header class="sticky top-0 z-50 border-b border-white/5" style="background: rgba(10, 14, 26, 0.95); backdrop-filter: blur(12px);">
   <nav class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
     <!-- Logo Wordmark -->
-    <a href="/" class="flex flex-col items-start group">
+    <a href={base} class="flex flex-col items-start group">
       <span class="text-xl md:text-2xl font-heading font-black text-cream tracking-[0.2em] group-hover:text-white transition-colors">
         PETER P.
       </span>

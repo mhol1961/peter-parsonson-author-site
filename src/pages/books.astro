@@ -1,6 +1,7 @@
 ---
 // Books page - The John Hunter Series by Peter P.
 import BaseLayout from '@layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -31,7 +32,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
             <a href="#synopsis" class="btn-primary">
               Read the Brief
             </a>
-            <a href="/about" class="btn-secondary text-center">
+            <a href={`${base}/about`} class="btn-secondary text-center">
               Meet the Author
             </a>
           </div>
@@ -55,7 +56,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         <div class="flex-shrink-0">
           <div class="book-cover-wrapper">
             <div class="aspect-[2/3] w-64 md:w-72 lg:w-80 border-2 border-gray-700 flex items-center justify-center overflow-hidden shadow-2xl" style="box-shadow: 0 20px 60px rgba(0,0,0,0.7), -8px 8px 0 rgba(220, 38, 38, 0.2);">
-              <img src="/images/Front-Cover.jpg" alt="The Tempest Toss by Peter P." class="w-full h-full object-cover" loading="eager" />
+              <img src={`${base}/images/Front-Cover.jpg`} alt="The Tempest Toss by Peter P." class="w-full h-full object-cover" loading="eager" />
             </div>
           </div>
         </div>
@@ -117,7 +118,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
       <!-- CTA Buttons -->
       <div class="flex flex-col sm:flex-row gap-4">
         <a href="#series-overview" class="btn-primary text-center">Explore the Series</a>
-        <a href="/about" class="btn-secondary text-center">About the Author</a>
+        <a href={`${base}/about`} class="btn-secondary text-center">About the Author</a>
       </div>
     </div>
   </section>
@@ -237,7 +238,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
               <!-- Cover thumbnail -->
               <div class="w-32 h-44 flex-shrink-0 flex-grow-0">
                 <img
-                  src="/images/Front-Cover.jpg"
+                  src={`${base}/images/Front-Cover.jpg`}
                   alt="The Tempest Toss cover"
                   class="w-full h-full object-contain border border-gray-700"
                   loading="lazy"
@@ -256,7 +257,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
                 <p class="text-gray-300 leading-relaxed mb-6">
                   Navy SEAL Commander John Hunter survives a devastating terrorist attack on Tampa and uncovers a sixty-year conspiracy rooted in Cold War EMP weapons research. With a Chinese freighter running dark in the Gulf and a traitor inside the wire, the race to prevent catastrophe begins.
                 </p>
-                <a href="/contact" class="inline-flex items-center text-accent font-bold uppercase tracking-wide hover:text-primary transition-colors">
+                <a href={`${base}/contact`} class="inline-flex items-center text-accent font-bold uppercase tracking-wide hover:text-primary transition-colors">
                   Get Notified &rarr;
                 </a>
               </div>
@@ -331,7 +332,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 
       <div class="text-center">
         <p class="text-gray-400 mb-6">Be the first to know when pre-orders open.</p>
-        <a href="/contact" class="btn-primary">Get on the List</a>
+        <a href={`${base}/contact`} class="btn-primary">Get on the List</a>
       </div>
     </div>
   </section>

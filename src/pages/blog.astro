@@ -1,6 +1,7 @@
 ---
 // Blog page
 import BaseLayout from '@layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -9,7 +10,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
   type="website"
 >
   <!-- Hero Section - Military Communications Terminal -->
-  <section class="relative overflow-hidden" style="min-height: 60vh; display: flex; align-items: center; background-image: linear-gradient(135deg, rgba(10, 14, 26, 0.88) 0%, rgba(6, 10, 20, 0.85) 100%), url('/images/blog-hero-bg.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+  <section class="relative overflow-hidden" style={`min-height: 60vh; display: flex; align-items: center; background-image: linear-gradient(135deg, rgba(10, 14, 26, 0.88) 0%, rgba(6, 10, 20, 0.85) 100%), url('${base}/images/blog-hero-bg.png'); background-size: cover; background-position: center; background-attachment: fixed;`}>
     <!-- Grid pattern background -->
     <div class="absolute inset-0 z-0" style="background: linear-gradient(rgba(13, 148, 136, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(13, 148, 136, 0.03) 1px, transparent 1px); background-size: 40px 40px;"></div>
     <!-- Red grid overlay -->
@@ -73,7 +74,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         <!-- Featured Image -->
         <div class="md:col-span-1 relative">
           <div class="aspect-square border-2 border-red-600/30 overflow-hidden mb-4">
-            <img src="/images/the-art-of-writing-military-fiction-article.png" alt="The Art of Writing Authentic Military Fiction" class="w-full h-full object-cover" loading="lazy" />
+            <img src={`${base}/images/the-art-of-writing-military-fiction-article.png`} alt="The Art of Writing Authentic Military Fiction" class="w-full h-full object-cover" loading="lazy" />
           </div>
         </div>
 
@@ -120,7 +121,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         <!-- Article 1 -->
         <article class="section-card border border-red-600/30 overflow-hidden hover:border-red-600/60 transition-all duration-300 group flex flex-col fade-in-up" style="transition-delay: 0s">
           <div class="aspect-video overflow-hidden relative border-b border-red-600/20">
-            <img src="/images/behind-the-research-creating-authentic-operations-article.png" alt="Behind the Research: Creating Authentic Operations" class="w-full h-full object-cover" loading="lazy" />
+            <img src={`${base}/images/behind-the-research-creating-authentic-operations-article.png`} alt="Behind the Research: Creating Authentic Operations" class="w-full h-full object-cover" loading="lazy" />
           </div>
           <div class="p-8 flex-1 flex flex-col">
             <div class="flex items-center gap-3 mb-4">
@@ -143,7 +144,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         <!-- Article 2 -->
         <article class="section-card border border-teal-600/30 overflow-hidden hover:border-teal-600/60 transition-all duration-300 group flex flex-col fade-in-up" style="transition-delay: 0.1s">
           <div class="aspect-video overflow-hidden relative border-b border-teal-600/20">
-            <img src="/images/character-developme%20nt-in-high-stakes-situations-article.png" alt="Character Development in High-Stakes Situations" class="w-full h-full object-cover" loading="lazy" />
+            <img src={`${base}/images/character-developme%20nt-in-high-stakes-situations-article.png`} alt="Character Development in High-Stakes Situations" class="w-full h-full object-cover" loading="lazy" />
           </div>
           <div class="p-8 flex-1 flex flex-col">
             <div class="flex items-center gap-3 mb-4">
@@ -166,7 +167,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         <!-- Article 3 -->
         <article class="section-card border border-red-600/30 overflow-hidden hover:border-red-600/60 transition-all duration-300 group flex flex-col fade-in-up" style="transition-delay: 0.2s">
           <div class="aspect-video overflow-hidden relative border-b border-red-600/20">
-            <img src="/images/pacing-your-thriller-creating-tension-without-exhaustion-article.png" alt="Pacing Your Thriller: Creating Tension Without Exhaustion" class="w-full h-full object-cover" loading="lazy" />
+            <img src={`${base}/images/pacing-your-thriller-creating-tension-without-exhaustion-article.png`} alt="Pacing Your Thriller: Creating Tension Without Exhaustion" class="w-full h-full object-cover" loading="lazy" />
           </div>
           <div class="p-8 flex-1 flex flex-col">
             <div class="flex items-center gap-3 mb-4">
@@ -189,7 +190,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         <!-- Article 4 -->
         <article class="section-card border border-teal-600/30 overflow-hidden hover:border-teal-600/60 transition-all duration-300 group flex flex-col fade-in-up" style="transition-delay: 0.3s">
           <div class="aspect-video overflow-hidden relative border-b border-teal-600/20">
-            <img src="/images/the-responsibility-of-writing-about-service-article.png" alt="The Responsibility of Writing About Service" class="w-full h-full object-cover" loading="lazy" />
+            <img src={`${base}/images/the-responsibility-of-writing-about-service-article.png`} alt="The Responsibility of Writing About Service" class="w-full h-full object-cover" loading="lazy" />
           </div>
           <div class="p-8 flex-1 flex flex-col">
             <div class="flex items-center gap-3 mb-4">

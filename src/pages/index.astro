@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
 import NewsletterSignup from '@components/NewsletterSignup.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -65,10 +66,10 @@ import NewsletterSignup from '@components/NewsletterSignup.astro';
           </div>
 
           <div class="animate-fade-in-up delay-400 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/books" class="btn-primary animate-pulse-glow">
+            <a href={`${base}/books`} class="btn-primary animate-pulse-glow">
               Enter the Dark Territory
             </a>
-            <a href="/about" class="btn-secondary">
+            <a href={`${base}/about`} class="btn-secondary">
               Meet the Author
             </a>
           </div>
@@ -80,7 +81,7 @@ import NewsletterSignup from '@components/NewsletterSignup.astro';
           <div class="book-float relative z-[5]">
             <div class="book-3d">
               <img
-                src="/images/Front-Cover.jpg"
+                src={`${base}/images/Front-Cover.jpg`}
                 alt="The Tempest Toss by Peter P."
                 class="w-56 md:w-64 lg:w-72"
                 loading="eager"
@@ -131,7 +132,7 @@ import NewsletterSignup from '@components/NewsletterSignup.astro';
       </div>
 
       <div class="mt-10 text-center">
-        <a href="/books" class="btn-primary">Read More About the Book</a>
+        <a href={`${base}/books`} class="btn-primary">Read More About the Book</a>
       </div>
     </div>
   </section>
@@ -162,7 +163,7 @@ import NewsletterSignup from '@components/NewsletterSignup.astro';
         <div class="md:col-span-2 fade-in-left">
           <div class="aspect-[3/4] rounded-sm overflow-hidden relative" style="background: linear-gradient(135deg, rgba(13,148,136,0.2), rgba(220,38,38,0.1));">
             <img
-              src="/images/pete-author-image.png"
+              src={`${base}/images/pete-author-image.png`}
               alt="Peter P."
               class="w-full h-full object-cover"
               loading="lazy"
@@ -185,7 +186,7 @@ import NewsletterSignup from '@components/NewsletterSignup.astro';
             A chemist with a Master of Science from Georgia Tech, he brought the same rigor to the EMP threat that he has spent thirty years applying to complex technical problems. He lives in Texas &mdash; close enough to the border to watch the real war being fought there, and close enough to the truth to know what fiction can say that the official record cannot.
           </p>
 
-          <a href="/about" class="btn-secondary">Read Full Bio</a>
+          <a href={`${base}/about`} class="btn-secondary">Read Full Bio</a>
         </div>
       </div>
     </div>
@@ -205,11 +206,11 @@ import NewsletterSignup from '@components/NewsletterSignup.astro';
 
       <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 fade-in-up">
         <!-- Book 1 -->
-        <a href="/books" class="group block">
+        <a href={`${base}/books`} class="group block">
           <div class="relative overflow-hidden mb-4">
             <span class="absolute top-2 right-3 font-heading font-bold text-white/[0.07] z-0" style="font-size: 3rem;">01</span>
             <img
-              src="/images/Front-Cover.jpg"
+              src={`${base}/images/Front-Cover.jpg`}
               alt="The Tempest Toss"
               class="w-full aspect-[2/3] object-cover transition-transform duration-500 group-hover:scale-105 relative z-[1]"
               loading="lazy"
@@ -244,7 +245,7 @@ import NewsletterSignup from '@components/NewsletterSignup.astro';
       </div>
 
       <div class="text-center mt-10">
-        <a href="/books" class="btn-teal">View All Books</a>
+        <a href={`${base}/books`} class="btn-teal">View All Books</a>
       </div>
     </div>
   </section>
@@ -284,9 +285,9 @@ import NewsletterSignup from '@components/NewsletterSignup.astro';
 
       <div class="grid md:grid-cols-3 gap-8">
         {[
-          { sector: 'SECTOR: CRAFT', title: 'Getting the Physics Right', desc: 'How twenty-two years of research and a chemistry background shaped every technical detail in The Tempest Toss.', img: '/images/getting-the-physics-right-latest-articles.png' },
-          { sector: 'SECTOR: RECON', title: 'The EMP Threat Is Real', desc: 'Declassified Cold War history and why electromagnetic pulse weapons remain one of the most underappreciated threats.', img: '/images/the-emp-threat-is-real-article-latest.png' },
-          { sector: 'SECTOR: INTEL', title: 'Why Fiction Says What the Record Cannot', desc: 'On the power of military fiction to tell truths that official records won\'t — and why that matters now.', img: '/images/why-fiction-says-what-the-record-cant.png' }
+          { sector: 'SECTOR: CRAFT', title: 'Getting the Physics Right', desc: 'How twenty-two years of research and a chemistry background shaped every technical detail in The Tempest Toss.', img: `${base}/images/getting-the-physics-right-latest-articles.png` },
+          { sector: 'SECTOR: RECON', title: 'The EMP Threat Is Real', desc: 'Declassified Cold War history and why electromagnetic pulse weapons remain one of the most underappreciated threats.', img: `${base}/images/the-emp-threat-is-real-article-latest.png` },
+          { sector: 'SECTOR: INTEL', title: 'Why Fiction Says What the Record Cannot', desc: 'On the power of military fiction to tell truths that official records won\'t — and why that matters now.', img: `${base}/images/why-fiction-says-what-the-record-cant.png` }
         ].map((post, i) => (
           <article class="group border border-white/5 hover:border-primary/30 transition-all duration-300 bg-dark-card/50 fade-in-up" style={`transition-delay: ${i * 0.1}s`}>
             <div class="aspect-video overflow-hidden">
@@ -305,7 +306,7 @@ import NewsletterSignup from '@components/NewsletterSignup.astro';
       </div>
 
       <div class="text-center mt-10">
-        <a href="/blog" class="btn-secondary">View All Articles</a>
+        <a href={`${base}/blog`} class="btn-secondary">View All Articles</a>
       </div>
     </div>
   </section>
