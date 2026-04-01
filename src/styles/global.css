@@ -716,17 +716,7 @@ textarea::placeholder {
   z-index: 2;
 }
 
-.about-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url('/images/pete-author-image.png');
-  background-size: cover;
-  background-position: center 20%;
-  filter: blur(40px) brightness(0.15);
-  transform: scale(1.2);
-  z-index: 0;
-}
+/* about-hero background handled via inline divs to avoid ::before/::after conflicts with scan-lines and grid-overlay */
 
 /* ============================================
    FLOATING BOOK COVER
