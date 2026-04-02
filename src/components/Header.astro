@@ -1,5 +1,6 @@
 ---
 const base = import.meta.env.BASE_URL;
+const currentPath = Astro.url.pathname;
 const navLinks = [
   { label: 'Home', href: base },
   { label: 'About', href: `${base}/about` },
@@ -7,6 +8,10 @@ const navLinks = [
   { label: 'Blog', href: `${base}/blog` },
   { label: 'Contact', href: `${base}/contact` }
 ];
+function isActive(href: string): boolean {
+  if (href === base) return currentPath === base || currentPath === base + '/';
+  return currentPath.startsWith(href);
+}
 ---
 
 <!-- Top accent strip -->
@@ -34,7 +39,7 @@ const navLinks = [
       {navLinks.map((link) => (
         <a
           href={link.href}
-          class="text-xs uppercase tracking-[0.25em] text-gray-400 hover:text-white transition-colors duration-300 font-semibold"
+          class={`text-xs uppercase tracking-[0.25em] hover:text-white transition-colors duration-300 font-semibold ${isActive(link.href) ? 'text-accent' : 'text-gray-400'}`}
         >
           {link.label}
         </a>
@@ -73,7 +78,7 @@ const navLinks = [
       {navLinks.map((link) => (
         <a
           href={link.href}
-          class="text-sm uppercase tracking-[0.25em] text-gray-300 hover:text-white transition-colors font-semibold"
+          class={`text-sm uppercase tracking-[0.25em] hover:text-white transition-colors font-semibold ${isActive(link.href) ? 'text-accent' : 'text-gray-300'}`}
         >
           {link.label}
         </a>
