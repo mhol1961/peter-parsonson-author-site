@@ -220,13 +220,13 @@ const base = import.meta.env.BASE_URL;
     </div>
   </section>
 
-  <!-- Categories & Tags Section -->
-  <section class="section-dark py-16 md:py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-3 gap-12">
+  <!-- Categories, Tags & Newsletter CTA -->
+  <section class="py-16 md:py-20 border-t border-white/5" style="background: linear-gradient(180deg, #0d1117 0%, #0a0e1a 100%);">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16">
         <!-- Categories -->
-        <div>
-          <h3 class="text-2xl font-black uppercase tracking-tight text-cream mb-6 pb-3 border-b-2 border-red-600">
+        <div class="fade-in-up">
+          <h3 class="text-xl font-black uppercase tracking-tight text-cream mb-6 pb-3 border-b-2 border-red-600">
             Categories
           </h3>
           <ul class="space-y-3">
@@ -235,54 +235,26 @@ const base = import.meta.env.BASE_URL;
             <li><a href="#" class="text-gray-400 hover:text-red-500 transition-colors uppercase text-sm tracking-wider font-semibold">Research & Interviews (6)</a></li>
             <li><a href="#" class="text-gray-400 hover:text-red-500 transition-colors uppercase text-sm tracking-wider font-semibold">Character Development (4)</a></li>
             <li><a href="#" class="text-gray-400 hover:text-red-500 transition-colors uppercase text-sm tracking-wider font-semibold">Publishing Journey (3)</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-red-500 transition-colors uppercase text-sm tracking-wider font-semibold">Personal (2)</a></li>
           </ul>
         </div>
 
-        <!-- Popular Tags -->
-        <div>
-          <h3 class="text-2xl font-black uppercase tracking-tight text-cream mb-6 pb-3 border-b-2 border-teal-600">
+        <!-- Tags + Newsletter Coming Soon -->
+        <div class="fade-in-up stagger-2">
+          <h3 class="text-xl font-black uppercase tracking-tight text-cream mb-6 pb-3 border-b-2 border-teal-600">
             Popular Tags
           </h3>
-          <div class="flex flex-wrap gap-3">
-            <a href="#" class="inline-block px-4 py-2 bg-red-600/10 border border-red-600/30 hover:border-red-600/60 text-cream hover:text-red-400 uppercase text-xs font-black tracking-wider transition-all">
-              #THRILLER
-            </a>
-            <a href="#" class="inline-block px-4 py-2 bg-teal-600/10 border border-teal-600/30 hover:border-teal-600/60 text-cream hover:text-teal-400 uppercase text-xs font-black tracking-wider transition-all">
-              #MILITARY
-            </a>
-            <a href="#" class="inline-block px-4 py-2 bg-red-600/10 border border-red-600/30 hover:border-red-600/60 text-cream hover:text-red-400 uppercase text-xs font-black tracking-wider transition-all">
-              #WRITING
-            </a>
-            <a href="#" class="inline-block px-4 py-2 bg-teal-600/10 border border-teal-600/30 hover:border-teal-600/60 text-cream hover:text-teal-400 uppercase text-xs font-black tracking-wider transition-all">
-              #FICTION
-            </a>
-            <a href="#" class="inline-block px-4 py-2 bg-red-600/10 border border-red-600/30 hover:border-red-600/60 text-cream hover:text-red-400 uppercase text-xs font-black tracking-wider transition-all">
-              #CRAFT
-            </a>
-            <a href="#" class="inline-block px-4 py-2 bg-teal-600/10 border border-teal-600/30 hover:border-teal-600/60 text-cream hover:text-teal-400 uppercase text-xs font-black tracking-wider transition-all">
-              #AUTHOR
-            </a>
+          <div class="flex flex-wrap gap-3 mb-10">
+            <a href="#" class="inline-block px-4 py-2 bg-red-600/10 border border-red-600/30 hover:border-red-600/60 text-cream hover:text-red-400 uppercase text-xs font-black tracking-wider transition-all">#THRILLER</a>
+            <a href="#" class="inline-block px-4 py-2 bg-teal-600/10 border border-teal-600/30 hover:border-teal-600/60 text-cream hover:text-teal-400 uppercase text-xs font-black tracking-wider transition-all">#MILITARY</a>
+            <a href="#" class="inline-block px-4 py-2 bg-red-600/10 border border-red-600/30 hover:border-red-600/60 text-cream hover:text-red-400 uppercase text-xs font-black tracking-wider transition-all">#EMP</a>
+            <a href="#" class="inline-block px-4 py-2 bg-teal-600/10 border border-teal-600/30 hover:border-teal-600/60 text-cream hover:text-teal-400 uppercase text-xs font-black tracking-wider transition-all">#FICTION</a>
+            <a href="#" class="inline-block px-4 py-2 bg-red-600/10 border border-red-600/30 hover:border-red-600/60 text-cream hover:text-red-400 uppercase text-xs font-black tracking-wider transition-all">#CRAFT</a>
           </div>
-        </div>
 
-        <!-- Newsletter -->
-        <div>
-          <h3 class="text-2xl font-black uppercase tracking-tight text-cream mb-6 pb-3 border-b-2 border-red-600">
-            Newsletter
-          </h3>
-          <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-            Get new articles and writing insights delivered to your inbox. Weekly deep dives into military fiction, craft, and storytelling.
-          </p>
-          <div class="flex flex-col gap-3">
-            <input
-              type="email"
-              placeholder="Your email"
-              class="w-full px-4 py-3 bg-dark-card border border-white/15 text-cream placeholder-gray-600 uppercase text-xs tracking-wider font-semibold focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600/30 transition-all"
-            />
-            <button class="btn-primary hover:shadow-lg hover:shadow-red-600/50">
-              Subscribe
-            </button>
+          <div class="p-6 border border-teal-600/20" style="background: rgba(13, 148, 136, 0.05);">
+            <p class="mil-text mb-2">/// Intel Updates</p>
+            <p class="text-cream font-bold uppercase tracking-wider text-sm mb-2">Newsletter Coming Soon</p>
+            <p class="text-gray-400 text-sm leading-relaxed">Mission briefings, release intel, and behind-the-scenes dispatches — delivered to your inbox.</p>
           </div>
         </div>
       </div>
