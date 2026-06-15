@@ -787,11 +787,12 @@ textarea::placeholder {
    MISSILE LAUNCH EFFECT (Repeating every 3s)
    ============================================ */
 
-/* Launch origin — the ship circled in the screenshot, right of text, left of book cover */
+/* Launch origin — the visible vessel in the open gap, left of the book cover
+   (kept clear of the floating book so the firing animation reads fully) */
 .missile-launch {
   position: absolute;
-  left: 67%;
-  top: 55%;
+  left: 59%;
+  top: 54%;
   z-index: 2;
   pointer-events: none;
 }
