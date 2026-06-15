@@ -79,14 +79,16 @@ const base = import.meta.env.BASE_URL;
           <p class="mil-text-red mt-6">Clearance: Top Secret // SCI</p>
         </div>
 
-        <!-- Book Cover - floating -->
+        <!-- Book Cover - floating. On lg+ it's pushed to the viewport's right edge
+             (not just the centered container) so on wide screens it never drifts
+             back over the firing ship at 67%. -->
         <div class="flex justify-center lg:justify-end animate-fade-in-up delay-300">
-          <div class="book-float relative z-[5]">
+          <div class="book-float relative z-[5] lg:translate-x-[max(0px,calc((100vw-1280px)/2-1rem))]">
             <div class="book-3d">
               <img
                 src={`${base}images/new-book-cover-image.png`}
                 alt="The Tempest Toss by P.S. Parsonson"
-                class="w-56 md:w-64 lg:w-72"
+                class="w-56 md:w-64 lg:w-52 xl:w-72"
                 loading="eager"
               />
             </div>

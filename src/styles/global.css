@@ -750,8 +750,10 @@ textarea::placeholder {
 }
 
 .book-float .book-3d img {
-  max-height: 500px;
-  width: auto;
+  /* Responsive width so the cover shrinks just enough on narrow desktops to
+     stay clear of the missile-launch ship at 67%; grows on wide screens. */
+  width: clamp(210px, 19vw, 320px);
+  height: auto;
   object-fit: contain;
   border-radius: 4px;
   box-shadow: -8px 12px 30px rgba(0,0,0,0.5), -2px 4px 10px rgba(0,0,0,0.3);
@@ -787,12 +789,11 @@ textarea::placeholder {
    MISSILE LAUNCH EFFECT (Repeating every 3s)
    ============================================ */
 
-/* Launch origin — the visible vessel in the open gap, left of the book cover
-   (kept clear of the floating book so the firing animation reads fully) */
+/* Launch origin — the ship circled in the screenshot, right of text, left of book cover */
 .missile-launch {
   position: absolute;
-  left: 59%;
-  top: 54%;
+  left: 67%;
+  top: 55%;
   z-index: 2;
   pointer-events: none;
 }
