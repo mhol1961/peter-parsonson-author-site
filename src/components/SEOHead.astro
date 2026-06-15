@@ -34,13 +34,13 @@ let jsonLd: any = {
   jobTitle: 'Military Thriller Author',
   description: 'Military thriller author and USCG Authors Program member',
   url: siteUrl,
-  image: `${siteUrl}/images/Front-Cover.jpg`,
+  image: `${siteUrl}/images/new-book-cover-image.png`,
   alumniOf: {
     '@type': 'CollegeOrUniversity',
     name: 'Georgia Institute of Technology'
   },
   sameAs: [
-    'https://twitter.com/peterp',
+    'https://x.com/Hawkeye45691',
     'https://www.instagram.com/peterp',
     'https://www.facebook.com/peterp'
   ]
@@ -71,7 +71,7 @@ if (type === 'article') {
     '@type': 'Book',
     name: 'The Tempest Toss',
     description: description,
-    image: `${siteUrl}/images/Front-Cover.jpg`,
+    image: `${siteUrl}/images/new-book-cover-image.png`,
     url: `${siteUrl}/books/`,
     author: {
       '@type': 'Person',
@@ -119,7 +119,7 @@ if (type === 'article') {
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={`${siteUrl}${ogImage}`} />
-  <meta name="twitter:creator" content="@peterp" />
+  <meta name="twitter:creator" content="@Hawkeye45691" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

@@ -81,8 +81,8 @@ const base = import.meta.env.BASE_URL;
           <div class="book-float relative z-[5]">
             <div class="book-3d">
               <img
-                src={`${base}/images/Front-Cover.jpg`}
-                alt="The Tempest Toss by Peter P."
+                src={`${base}/images/new-book-cover-image.png`}
+                alt="The Tempest Toss by P.S. Parsonson"
                 class="w-56 md:w-64 lg:w-72"
                 loading="eager"
               />
@@ -193,6 +193,60 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- ==========================================
+       STONEMONT CROSS-LINK — Steve Smith recommendation
+       ========================================== -->
+  <section class="py-16 md:py-20 section-card border-y border-white/5">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10 fade-in-up">
+        <div class="teal-divider mx-auto mb-6"></div>
+        <p class="section-label">Recommended Reading</p>
+        <h2 class="text-cream">The Author Behind the Foreword</h2>
+      </div>
+
+      <div class="grid md:grid-cols-[auto_1fr] gap-10 md:gap-12 items-center max-w-3xl mx-auto fade-in-up">
+        <!-- Clickable Stonemont cover -->
+        <a
+          href="https://www.stonemont.us"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group block flex-shrink-0 mx-auto md:mx-0"
+          aria-label="Visit Steve Smith's Stonemont series at stonemont.us"
+        >
+          <div class="aspect-[2/3] w-44 md:w-52 border-2 border-gray-700 group-hover:border-accent/60 flex items-center justify-center overflow-hidden transition-all duration-300 relative" style="box-shadow: 0 16px 48px rgba(0,0,0,0.6), -6px 6px 0 rgba(220, 38, 38, 0.2);">
+            <img
+              src={`${base}/images/steve-smith-book1.png`}
+              alt="The Reversion, Book 1 of the Stonemont Series by Steven C. Smith"
+              class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+              onerror="this.style.display='none'; this.parentElement.querySelector('.cover-fallback').style.display='flex';"
+            />
+            <div class="cover-fallback absolute inset-0 flex-col items-center justify-center text-center px-4" style="display:none; background: linear-gradient(160deg, #141b2d 0%, #0a0e1a 100%);">
+              <span class="text-2xl font-heading font-black text-cream uppercase tracking-tight leading-none">Stonemont</span>
+              <span class="text-[10px] text-primary uppercase tracking-[0.3em] font-bold mt-3">Steve Smith</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Intro + CTA -->
+        <div class="text-center md:text-left">
+          <p class="text-white/85 text-lg md:text-xl leading-relaxed mb-6">
+            I&rsquo;d like to introduce you to Steve Smith and his Stonemont series novels. Steve is the reason I took up writing again. His work is the best in the genre.
+          </p>
+          <p class="text-sm text-gray-400 uppercase tracking-widest font-bold mb-8">&mdash; P.S. Parsonson</p>
+          <a
+            href="https://www.stonemont.us"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary"
+          >
+            Check Out the Stonemont Series &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
        SERIES PREVIEW - Book grid
        ========================================== -->
   <section class="py-16 md:py-20 section-darker relative grain-overlay">
@@ -210,7 +264,7 @@ const base = import.meta.env.BASE_URL;
           <div class="relative overflow-hidden mb-4">
             <span class="absolute top-2 right-3 font-heading font-bold text-white/[0.07] z-0" style="font-size: 3rem;">01</span>
             <img
-              src={`${base}/images/Front-Cover.jpg`}
+              src={`${base}/images/new-book-cover-image.png`}
               alt="The Tempest Toss"
               class="w-full aspect-[2/3] object-contain transition-transform duration-500 group-hover:scale-105 relative z-[1]"
               loading="lazy"
