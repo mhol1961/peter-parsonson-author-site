@@ -1,8 +1,9 @@
 name: Deploy to GitHub Pages
 
+# Disabled: site is now hosted on Railway at the root domain (peterparsonson.com).
+# The Astro build no longer sets a GitHub Pages `base` path, so a Pages deploy
+# would be broken. Left as manual-only (workflow_dispatch) in case it's needed.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
