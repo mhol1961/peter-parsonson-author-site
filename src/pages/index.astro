@@ -66,10 +66,10 @@ const base = import.meta.env.BASE_URL;
           </div>
 
           <div class="animate-fade-in-up delay-400 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`${base}/books`} class="btn-primary animate-pulse-glow">
+            <a href={`${base}books`} class="btn-primary animate-pulse-glow">
               Enter the Dark Territory
             </a>
-            <a href={`${base}/about`} class="btn-secondary">
+            <a href={`${base}about`} class="btn-secondary">
               Meet the Author
             </a>
           </div>
@@ -81,7 +81,7 @@ const base = import.meta.env.BASE_URL;
           <div class="book-float relative z-[5]">
             <div class="book-3d">
               <img
-                src={`${base}/images/new-book-cover-image.png`}
+                src={`${base}images/new-book-cover-image.png`}
                 alt="The Tempest Toss by P.S. Parsonson"
                 class="w-56 md:w-64 lg:w-72"
                 loading="eager"
@@ -132,7 +132,7 @@ const base = import.meta.env.BASE_URL;
       </div>
 
       <div class="mt-10 text-center">
-        <a href={`${base}/books`} class="btn-primary">Read More About the Book</a>
+        <a href={`${base}books`} class="btn-primary">Read More About the Book</a>
       </div>
     </div>
   </section>
@@ -163,7 +163,7 @@ const base = import.meta.env.BASE_URL;
         <div class="md:col-span-2 fade-in-left">
           <div class="aspect-[3/4] rounded-sm overflow-hidden relative" style="background: linear-gradient(135deg, rgba(13,148,136,0.2), rgba(220,38,38,0.1));">
             <img
-              src={`${base}/images/pete-author-image.png`}
+              src={`${base}images/pete-author-image.png`}
               alt="Peter P."
               class="w-full h-full object-cover"
               loading="lazy"
@@ -186,7 +186,7 @@ const base = import.meta.env.BASE_URL;
             A chemist with a Master of Science from Georgia Tech, he brought the same rigor to the EMP threat that he has spent thirty years applying to complex technical problems. He lives in Texas &mdash; close enough to the border to watch the real war being fought there, and close enough to the truth to know what fiction can say that the official record cannot.
           </p>
 
-          <a href={`${base}/about`} class="btn-secondary">Read Full Bio</a>
+          <a href={`${base}about`} class="btn-secondary">Read Full Bio</a>
         </div>
       </div>
     </div>
@@ -214,7 +214,7 @@ const base = import.meta.env.BASE_URL;
         >
           <div class="aspect-[2/3] w-44 md:w-52 border-2 border-gray-700 group-hover:border-accent/60 flex items-center justify-center overflow-hidden transition-all duration-300 relative" style="box-shadow: 0 16px 48px rgba(0,0,0,0.6), -6px 6px 0 rgba(220, 38, 38, 0.2);">
             <img
-              src={`${base}/images/steve-smith-book1.png`}
+              src={`${base}images/steve-smith-book1.png`}
               alt="The Reversion, Book 1 of the Stonemont Series by Steven C. Smith"
               class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
@@ -260,11 +260,11 @@ const base = import.meta.env.BASE_URL;
 
       <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 fade-in-up">
         <!-- Book 1 -->
-        <a href={`${base}/books`} class="group block">
+        <a href={`${base}books`} class="group block">
           <div class="relative overflow-hidden mb-4">
             <span class="absolute top-2 right-3 font-heading font-bold text-white/[0.07] z-0" style="font-size: 3rem;">01</span>
             <img
-              src={`${base}/images/new-book-cover-image.png`}
+              src={`${base}images/new-book-cover-image.png`}
               alt="The Tempest Toss"
               class="w-full aspect-[2/3] object-contain transition-transform duration-500 group-hover:scale-105 relative z-[1]"
               loading="lazy"
@@ -299,7 +299,7 @@ const base = import.meta.env.BASE_URL;
       </div>
 
       <div class="text-center mt-10">
-        <a href={`${base}/books`} class="btn-teal">View All Books</a>
+        <a href={`${base}books`} class="btn-teal">View All Books</a>
       </div>
     </div>
   </section>
@@ -339,9 +339,9 @@ const base = import.meta.env.BASE_URL;
 
       <div class="grid md:grid-cols-3 gap-8">
         {[
-          { sector: 'SECTOR: CRAFT', title: 'Getting the Physics Right', desc: 'How twenty-two years of research and a chemistry background shaped every technical detail in The Tempest Toss.', img: `${base}/images/getting-the-physics-right-latest-articles.png` },
-          { sector: 'SECTOR: RECON', title: 'The EMP Threat Is Real', desc: 'Declassified Cold War history and why electromagnetic pulse weapons remain one of the most underappreciated threats.', img: `${base}/images/the-emp-threat-is-real-article-latest.png` },
-          { sector: 'SECTOR: INTEL', title: 'Why Fiction Says What the Record Cannot', desc: 'On the power of military fiction to tell truths that official records won\'t — and why that matters now.', img: `${base}/images/why-fiction-says-what-the-record-cant.png` }
+          { sector: 'SECTOR: CRAFT', title: 'Getting the Physics Right', desc: 'How twenty-two years of research and a chemistry background shaped every technical detail in The Tempest Toss.', img: `${base}images/getting-the-physics-right-latest-articles.png` },
+          { sector: 'SECTOR: RECON', title: 'The EMP Threat Is Real', desc: 'Declassified Cold War history and why electromagnetic pulse weapons remain one of the most underappreciated threats.', img: `${base}images/the-emp-threat-is-real-article-latest.png` },
+          { sector: 'SECTOR: INTEL', title: 'Why Fiction Says What the Record Cannot', desc: 'On the power of military fiction to tell truths that official records won\'t — and why that matters now.', img: `${base}images/why-fiction-says-what-the-record-cant.png` }
         ].map((post, i) => (
           <article class="group border border-white/5 hover:border-primary/30 transition-all duration-300 bg-dark-card/50 fade-in-up" style={`transition-delay: ${i * 0.1}s`}>
             <div class="aspect-video overflow-hidden">
@@ -360,7 +360,7 @@ const base = import.meta.env.BASE_URL;
       </div>
 
       <div class="text-center mt-10">
-        <a href={`${base}/blog`} class="btn-secondary">View All Articles</a>
+        <a href={`${base}blog`} class="btn-secondary">View All Articles</a>
       </div>
     </div>
   </section>

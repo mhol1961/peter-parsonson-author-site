@@ -4,8 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-  site: 'https://mhol1961.github.io',
-  base: '/peter-parsonson-author-site',
+  site: 'https://peterparsonson.com',
   integrations: [
     sitemap(),
     mdx()
