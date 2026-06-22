@@ -17,7 +17,7 @@ const {
   ogImage = '/og-image.jpg',
   canonical,
   type = 'website',
-  author = 'Peter P.',
+  author = 'P.S. Parsonson',
   publishDate,
   image
 } = Astro.props;
@@ -30,7 +30,7 @@ let jsonLd: any = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   '@id': `${siteUrl}/#author`,
-  name: 'Peter Parsonson',
+  name: 'P.S. Parsonson',
   jobTitle: 'Military Thriller Author',
   description: 'Military thriller author and USCG Authors Program member',
   url: siteUrl,
@@ -40,9 +40,7 @@ let jsonLd: any = {
     name: 'Georgia Institute of Technology'
   },
   sameAs: [
-    'https://x.com/Hawkeye45691',
-    'https://www.instagram.com/peterp',
-    'https://www.facebook.com/peterp'
+    'https://x.com/Hawkeye45691'
   ]
 };
 
@@ -61,7 +59,7 @@ if (type === 'article') {
     },
     publisher: {
       '@type': 'Person',
-      name: 'Peter Parsonson',
+      name: 'P.S. Parsonson',
       url: siteUrl
     }
   };
@@ -75,7 +73,7 @@ if (type === 'article') {
     url: `${siteUrl}/books/`,
     author: {
       '@type': 'Person',
-      name: 'Peter Parsonson',
+      name: 'P.S. Parsonson',
       url: siteUrl
     },
     bookFormat: 'https://schema.org/Paperback',
@@ -111,7 +109,7 @@ if (type === 'article') {
   <meta property="og:description" content={description} />
   <meta property="og:image" content={`${siteUrl}${ogImage}`} />
   <meta property="og:url" content={canonicalUrl.toString()} />
-  <meta property="og:site_name" content="Peter P. - Military Thriller Author" />
+  <meta property="og:site_name" content="P.S. Parsonson - Military Thriller Author" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card Meta Tags -->
