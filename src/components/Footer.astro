@@ -1,5 +1,6 @@
 ---
 // Footer.astro - Dark cinematic footer with sharp edges, bold typography, and dramatic styling
+import NewsletterSignup from '@components/NewsletterSignup.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -44,19 +45,7 @@ const base = import.meta.env.BASE_URL;
         <p class="text-gray-400 text-sm mb-4 leading-relaxed">
           Exclusive updates. No spam. No noise.
         </p>
-        <form class="space-y-3" onsubmit="event.preventDefault();">
-          <input
-            type="email"
-            placeholder="Enter email"
-            class="w-full bg-gray-900/50 border border-gray-700 px-4 py-3 text-sm text-cream placeholder-gray-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all"
-          />
-          <button
-            type="submit"
-            class="btn-primary w-full text-center"
-          >
-            Subscribe
-          </button>
-        </form>
+        <NewsletterSignup />
       </div>
     </div>
 

@@ -1,59 +1,64 @@
 ---
-// NewsletterSignup.astro - Mailchimp email signup
+// NewsletterSignup.astro — "Intel Updates" signup.
+// Captures full name (required), email (required), and optional phone via
+// Formspree (same endpoint as the contact form). A hidden `signup_type`
+// field labels each submission in the email body so newsletter signups are
+// easy to tell apart from contact messages. Multi-instance safe (handlers
+// bind to every .newsletter-form on the page).
+const inputClass =
+  'w-full bg-gray-900/50 border border-gray-700 px-4 py-3 text-sm text-cream placeholder-gray-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all';
 ---
 
-<form
-  id="newsletter-form"
-  class="w-full max-w-lg mx-auto"
-  action="https://example.us1.list-manage.com/subscribe/post?u=YOUR_LIST_ID&id=YOUR_FORM_ID"
-  method="POST"
->
-  <div class="flex flex-col sm:flex-row gap-3">
-    <input
-      type="email"
-      name="EMAIL"
-      placeholder="Enter your email"
-      required
-      class="flex-1 px-5 py-4 text-white text-sm"
-      style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);"
-    />
-    <button type="submit" class="btn-primary text-center whitespace-nowrap">
-      Subscribe
-    </button>
-  </div>
+<form class="newsletter-form w-full space-y-3" action="https://formspree.io/f/mrewgqrq" method="POST">
+  <!-- Labels this submission in the notification body -->
+  <input type="hidden" name="signup_type" value="Intel Updates Newsletter" />
 
-  <!-- Honeypot -->
-  <input type="text" name="b_YOUR_LIST_ID_YOUR_FORM_ID" value="" style="display:none" aria-hidden="true" tabindex="-1" />
+  <input type="text" name="name" required placeholder="Full name" class={inputClass} autocomplete="name" />
+  <input type="email" name="email" required placeholder="Email address" class={inputClass} autocomplete="email" />
+  <input type="tel" name="phone" placeholder="Phone (optional)" class={inputClass} autocomplete="tel" />
 
-  <p class="text-gray-600 text-xs mt-4 text-center">
-    We respect your privacy. Unsubscribe at any time.
-  </p>
+  <!-- Honeypot: Formspree discards submissions where this is filled -->
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
-  <div id="form-message" class="mt-4 hidden text-center text-sm"></div>
+  <button type="submit" class="btn-primary w-full text-center">Subscribe</button>
+
+  <p class="text-gray-600 text-xs text-center">We respect your privacy. Unsubscribe at any time.</p>
+  <div class="newsletter-msg hidden text-center text-sm"></div>
 </form>
 
 <script>
-  const form = document.getElementById('newsletter-form');
-  const msg = document.getElementById('form-message');
-  if (form) {
+  document.querySelectorAll('.newsletter-form').forEach((form) => {
+    const msg = form.querySelector('.newsletter-msg');
+    const setMsg = (text, ok) => {
+      msg.textContent = text;
+      msg.className = `newsletter-msg mt-2 text-center text-sm block ${ok ? 'text-emerald-400' : 'text-red-400'}`;
+    };
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const email = new FormData(form).get('EMAIL');
-      if (!email || !String(email).includes('@')) {
-        msg.textContent = 'Please enter a valid email address.';
-        msg.className = 'mt-4 text-center text-sm text-red-400 block';
+      const data = new FormData(form);
+      if (data.get('_gotcha')) return; // bot
+      const name = (data.get('name') || '').toString().trim();
+      const email = (data.get('email') || '').toString().trim();
+      if (!name || !email.includes('@')) {
+        setMsg('Please enter your name and a valid email address.', false);
         return;
       }
       try {
-        await fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'no-cors' });
-        msg.textContent = 'Thank you for subscribing!';
-        msg.className = 'mt-4 text-center text-sm text-emerald-400 block';
-        form.reset();
-        setTimeout(() => msg.classList.add('hidden'), 5000);
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { Accept: 'application/json' },
+        });
+        if (res.ok) {
+          setMsg("You're on the list. Watch your inbox for dispatches.", true);
+          form.reset();
+          setTimeout(() => msg.classList.add('hidden'), 6000);
+        } else {
+          setMsg('Something went wrong. Please try again.', false);
+        }
       } catch {
-        msg.textContent = 'Something went wrong. Please try again.';
-        msg.className = 'mt-4 text-center text-sm text-red-400 block';
+        setMsg('Network error. Please check your connection and try again.', false);
       }
     });
-  }
+  });
 </script>
