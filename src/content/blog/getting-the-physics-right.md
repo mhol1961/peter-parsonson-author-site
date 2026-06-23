@@ -12,7 +12,7 @@ There's a moment early in *The Tempest Toss* where a man stands in a Coast Guard
 
 I'm a chemist by training. Georgia Tech, master's degree, twenty-two years of nights and weekends spent checking my own work against people who actually built this hardware and lived through this history. So when I sat down to write a military thriller built around an electromagnetic pulse, I made myself one rule and refused to break it. If it's in the book, it's based on something real. Not "feels real." Real. Sourced. Defensible.
 
-That rule cost me sleep. It also, I think, made the book scarier.
+> That rule cost me sleep. It also, I think, made the book scarier.
 
 ## What an EMP Actually Does
 
@@ -25,6 +25,11 @@ E1 is the fast one. When the weapon goes off, gamma radiation strips electrons o
 Then there's E3, and E3 is a different animal entirely. It's slow. It [lasts tens to hundreds of seconds](https://en.wikipedia.org/wiki/Nuclear_electromagnetic_pulse) and comes from the blast briefly shoving the Earth's magnetic field out of shape. It behaves almost exactly like a severe geomagnetic storm, the kind the sun throws at us. E3 doesn't care about your phone. It cares about long wires. It induces slow, brutal currents in power lines hundreds of miles long and cooks the giant transformers at the heart of the grid. Those transformers are custom-built, weigh as much as a house, and can take a year or more to replace.
 
 So the honest picture is two threats, not one. A nanosecond knife that guts electronics, and a minute-long flood that drowns the grid. They threaten different things, on different timescales, for different reasons. There's no excuse for getting the shape of it wrong.
+
+<aside class="field-note">
+<span class="field-note-label">Two Threats, Not One</span>
+E1 is the nanosecond spike that fries electronics faster than any surge protector can react. E3 is the slow, minute-long surge that cooks the grid's giant transformers, the ones that take a year or more to replace.
+</aside>
 
 ## Why Writers Get It Wrong
 

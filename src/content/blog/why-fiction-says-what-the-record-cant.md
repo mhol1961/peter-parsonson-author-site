@@ -10,7 +10,7 @@ image: "/images/why-fiction-says-what-the-record-cant.jpg"
 
 I wrote a letter to Tom Clancy once. Years ago, long before *The Tempest Toss* had a title or a first chapter. I wanted to ask a dead-serious question from a man who had built a career on it: how do you tell the truth about something dangerous without telling secrets you're not allowed to tell? I never got an answer. But I think I figured out the answer anyway, and it's the reason I wrote a novel instead of a white paper.
 
-The record can't say certain things. Fiction can.
+> The record can't say certain things. Fiction can.
 
 ## What a Report Can't Do
 
@@ -33,6 +33,11 @@ Now go back one year, to 1983. Reagan watched a movie at Camp David called WarGa
 It still happens. In 2015, the analyst P.W. Singer and the journalist August Cole published [Ghost Fleet](https://en.wikipedia.org/wiki/Ghost_Fleet_(novel)), a novel about a future war with China that hinges on cyberattacks and compromised supply chains. The book carries hundreds of footnotes tying every invented event back to a real-world source, and it ended up as fodder for training and briefings across the military and even for National Security Council staff. They called it a novel. They used it like a warning.
 
 Three different decades. Same pattern. The story got through the door the document couldn't.
+
+<aside class="field-note">
+<span class="field-note-label">Fiction That Moved the Needle</span>
+The Hunt for Red October (1984) put Clancy in front of the Pentagon. WarGames (1983) helped push Reagan toward the first presidential directive on computer security. Ghost Fleet (2015) ended up in military and National Security Council briefings.
+</aside>
 
 ## Why the Story Gets Through
 

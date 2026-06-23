@@ -22,7 +22,9 @@ I spent twenty-two years as a chemist. I know what it feels like when a movie or
 
 Now imagine that carelessness aimed at something with real stakes. A boarding. A search and rescue in heavy seas. A watch that runs eighteen hours because the relief never came. People do those jobs. Some of them don't come home. When you write that world badly, you're not just being lazy. You're telling everyone who lived it that their reality was a prop.
 
-So the first responsibility is plain. Get it right out of respect. Not to impress the experts. To honor the people who can't unsee the truth.
+So the first responsibility is plain.
+
+> Get it right out of respect. Not to impress the experts. To honor the people who can't unsee the truth.
 
 ## The temptation to make it shine
 

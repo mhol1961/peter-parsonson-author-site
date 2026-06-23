@@ -10,7 +10,9 @@ image: "/images/pacing-your-thriller-creating-tension-without-exhaustion-article
 
 The first draft of *The Tempest Toss* opened with a missile launch, a power grid going dark across the eastern seaboard, and a firefight on the deck of a cutter. All in chapter one. I was proud of it. Then a friend who reads more thrillers than I do handed it back and said, "I got bored around page eleven." Bored. With explosions. That sentence taught me more about pacing than any craft book ever did.
 
-Here's the thing nobody tells you when you start writing action. Nonstop tension isn't tension. It's noise. And the reader stops hearing it.
+Here's the thing nobody tells you when you start writing action.
+
+> Nonstop tension isn't tension. It's noise. And the reader stops hearing it.
 
 ## Why wall-to-wall action goes numb
 

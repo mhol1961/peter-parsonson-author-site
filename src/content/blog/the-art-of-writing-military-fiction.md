@@ -18,7 +18,9 @@ I write under P.S. Parsonson. My first novel, [The Tempest Toss](/books), comes 
 
 ## The Threat Is Not the Story
 
-Here is the thing people get backward. The threat is not the story. The person who has to stop it is the story.
+Here is the thing people get backward.
+
+> The threat is not the story. The person who has to stop it is the story.
 
 An EMP can darken a city. That is a fact, and it is the engine of my book, and I spent real time with the actual science of it so I would not embarrass myself in front of anyone who knows better. But the EMP does not care. It has no fear, no marriage, no kid asleep in the next room. It cannot lose. Drama lives in the thing that can lose. Put the smartest weapon in the world on the page and it is inert until a frightened, tired, decent person stands between it and everyone they love.
 

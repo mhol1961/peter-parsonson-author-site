@@ -30,6 +30,8 @@ const related = all
   publishDate={post.data.pubDate.toISOString()}
   ogImage={post.data.image}
 >
+  <div class="read-progress" id="read-progress"></div>
+
   <!-- Article hero -->
   <section
     class="relative overflow-hidden"
@@ -89,15 +91,40 @@ const related = all
   </article>
 
   <style>
-    .blog-prose :global(p) { color: #cbd2dc; line-height: 1.8; margin: 0 0 1.5rem; font-size: 1.075rem; }
-    .blog-prose :global(h2) { color: #F5F0E8; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 1.7rem; line-height: 1.2; margin: 2.75rem 0 1rem; }
-    .blog-prose :global(h3) { color: #F5F0E8; font-weight: 700; font-size: 1.3rem; margin: 2rem 0 0.75rem; }
+    /* Reading progress bar */
+    .read-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%; z-index: 60; background: linear-gradient(90deg, #0d9488, #DC2626); transition: width .08s linear; }
+
+    .blog-prose :global(p) { color: #cbd2dc; line-height: 1.85; margin: 0 0 1.6rem; font-size: 1.08rem; }
+    /* Lead paragraph + drop cap */
+    .blog-prose :global(p:first-of-type) { font-size: 1.2rem; color: #dde3ea; }
+    .blog-prose :global(p:first-of-type)::first-letter { float: left; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 4.2rem; line-height: .72; padding: .4rem .55rem 0 0; color: #DC2626; }
+    /* Section headings as accented dividers */
+    .blog-prose :global(h2) { color: #F5F0E8; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 1.8rem; line-height: 1.2; margin: 3rem 0 1.1rem; padding-top: 1.6rem; border-top: 1px solid rgba(255,255,255,.08); position: relative; }
+    .blog-prose :global(h2)::before { content: ''; position: absolute; top: -1px; left: 0; width: 48px; height: 3px; background: #DC2626; }
+    .blog-prose :global(h3) { color: #F5F0E8; font-weight: 700; font-size: 1.3rem; margin: 2rem 0 .75rem; }
     .blog-prose :global(a) { color: #2dd4bf; text-decoration: underline; text-underline-offset: 3px; transition: color .2s; }
     .blog-prose :global(a:hover) { color: #5eead4; }
     .blog-prose :global(strong) { color: #F5F0E8; font-weight: 700; }
     .blog-prose :global(em) { color: #e7d9c4; }
-    .blog-prose :global(ul), .blog-prose :global(ol) { color: #cbd2dc; margin: 0 0 1.5rem 1.25rem; line-height: 1.8; }
+    .blog-prose :global(ul), .blog-prose :global(ol) { color: #cbd2dc; margin: 0 0 1.6rem 1.25rem; line-height: 1.85; }
     .blog-prose :global(li) { margin-bottom: .5rem; }
-    .blog-prose :global(blockquote) { border-left: 3px solid #DC2626; padding-left: 1.25rem; margin: 2rem 0; color: #e7d9c4; font-style: italic; }
+    /* Pull quote */
+    .blog-prose :global(blockquote) { margin: 2.6rem 0; padding: .25rem 0 .25rem 1.6rem; border-left: 3px solid #DC2626; }
+    .blog-prose :global(blockquote p) { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.55rem; line-height: 1.4; color: #F5F0E8; margin: 0; }
+    /* Field Note callout */
+    .blog-prose :global(.field-note) { margin: 2.6rem 0; padding: 1.5rem 1.75rem; background: rgba(13,148,136,.06); border: 1px solid rgba(13,148,136,.25); border-left: 4px solid #0d9488; color: #cbd2dc; font-size: 1rem; line-height: 1.7; }
+    .blog-prose :global(.field-note-label) { display: block; font-size: .7rem; letter-spacing: .25em; text-transform: uppercase; color: #2dd4bf; font-weight: 800; margin-bottom: .55rem; }
   </style>
+
+  <script>
+    const bar = document.getElementById('read-progress');
+    const update = () => {
+      const el = document.documentElement;
+      const max = el.scrollHeight - el.clientHeight;
+      if (bar) bar.style.width = (max > 0 ? (el.scrollTop / max) * 100 : 0) + '%';
+    };
+    document.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  </script>
 </BaseLayout>

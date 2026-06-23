@@ -14,6 +14,11 @@ That happened. It's in the record. And most people have never heard of it.
 
 I spent 22 years researching the novel that grew out of facts like this one, and I kept running into the same reaction. Smart, well-read people would hear the phrase "electromagnetic pulse" and assume I was describing something from a comic book. I get it. The truth sounds like fiction. But the science is real, the test was real, and a federal commission spent years telling Congress this is a problem we have not solved. So let me walk through what I found, plainly, and you can decide for yourself.
 
+<aside class="field-note">
+<span class="field-note-label">The Record</span>
+July 9, 1962. A 1.4 megaton warhead detonates 250 miles above the Pacific. Nine hundred miles away in Honolulu, roughly 300 streetlights go dark and a telephone link fails. The test was called Starfish Prime, and it sits in the public record.
+</aside>
+
 ## What an EMP actually is, minus the hand-waving
 
 I'm a chemist by training, Georgia Tech, so I'll keep this honest and skip the mystical stuff. A high-altitude electromagnetic pulse, the kind that matters here, is what you get when a nuclear weapon detonates well above the atmosphere, tens or hundreds of miles up. The explosion itself doesn't reach the ground. The blast, the heat, the crater you picture when you think "nuclear," none of that touches you.
@@ -32,7 +37,7 @@ The thing about Starfish Prime is that the EMP damage in Hawaii was, by the stan
 
 The pulse also damaged satellites in orbit, including Telstar 1, the satellite that had just made the first live television broadcast across the Atlantic. Decades later, physicists were still modeling exactly what the pulse did, because the effects came out larger than the scientists of the day had predicted. The American Physical Society [revisited the test sixty years on](https://www.aps.org/apsnews/2022/11/electromagnetic-pulse) and that's the line that stuck with me. The experts in 1962 underestimated it. They were surprised by their own bomb.
 
-I find that more sobering than any worst-case scenario. Not the doom. The surprise.
+> I find that more sobering than any worst-case scenario. Not the doom. The surprise.
 
 ## What the people who studied this told Congress
 

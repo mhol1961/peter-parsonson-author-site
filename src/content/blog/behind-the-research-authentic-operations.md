@@ -70,6 +70,6 @@ Research that shows is research the writer is proud of. You can feel the author 
 
 Research that disappears does the opposite. The reader never thinks about it, because it's holding the floor up under their feet. They just believe. They believe the order came down the way it would. They believe the gear, the clock, the cost. They believe the silence on the other side of the world belongs to people who think differently than we do and want to win as badly as we do.
 
-That's the whole game. Twenty-two years, and most of it spent making the work invisible.
+> That's the whole game. Twenty-two years, and most of it spent making the work invisible.
 
 If you want the rest of the story, you can [read more about me and the long road to this book](/about), or [see the John Hunter series and what's coming](/books). *The Tempest Toss* arrives this fall. I hope the research disappears. That'll mean I did it right.
