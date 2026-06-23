@@ -668,7 +668,7 @@ textarea::placeholder {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/images/hero-bg.png');
+  background-image: url('/images/hero-bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -694,7 +694,7 @@ textarea::placeholder {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('/images/books-hero-bg.png');
+  background-image: url('/images/books-hero-bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

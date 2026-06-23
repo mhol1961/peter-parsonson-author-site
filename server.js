@@ -26,50 +26,56 @@ const MIME = {
   '.txt': 'text/plain',
 };
 
+function send404(res) {
+  const notFound = path.join(DIST, '404.html');
+  res.writeHead(404, { 'Content-Type': 'text/html' });
+  fs.createReadStream(notFound)
+    .on('error', () => res.end('Not Found'))
+    .pipe(res);
+}
+
 const server = http.createServer((req, res) => {
-  let url = req.url.split('?')[0];
+  const url = decodeURIComponent(req.url.split('?')[0]);
 
-  // Try exact file first
-  let filePath = path.join(DIST, url);
-
-  // If directory or no extension, try index.html
-  if (!path.extname(url)) {
-    // Try /path/index.html
-    const indexPath = path.join(DIST, url, 'index.html');
-    if (fs.existsSync(indexPath)) {
-      filePath = indexPath;
-    } else if (url === '/') {
-      filePath = path.join(DIST, 'index.html');
-    }
+  // Resolve the target file and guard against path traversal outside DIST
+  let filePath = path.normalize(path.join(DIST, url));
+  if (!filePath.startsWith(DIST)) {
+    send404(res);
+    return;
   }
 
-  try {
-    if (!fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
-      // 404
-      const notFound = path.join(DIST, '404.html');
-      res.writeHead(404, { 'Content-Type': 'text/html' });
-      res.end(fs.existsSync(notFound) ? fs.readFileSync(notFound) : 'Not Found');
+  // Directory or extensionless URL -> serve its index.html
+  if (!path.extname(url)) {
+    filePath = path.join(filePath, 'index.html');
+  }
+
+  // Async stat so the event loop is never blocked
+  fs.stat(filePath, (err, stat) => {
+    if (err || !stat.isFile()) {
+      send404(res);
       return;
     }
 
     const ext = path.extname(filePath);
     const mime = MIME[ext] || 'application/octet-stream';
-    const data = fs.readFileSync(filePath);
-
-    // Cache static assets aggressively
     const cacheControl = ext === '.html'
       ? 'public, max-age=0, must-revalidate'
       : 'public, max-age=31536000, immutable';
 
     res.writeHead(200, {
       'Content-Type': mime,
+      'Content-Length': stat.size,
       'Cache-Control': cacheControl,
     });
-    res.end(data);
-  } catch (err) {
-    res.writeHead(500, { 'Content-Type': 'text/plain' });
-    res.end('Internal Server Error');
-  }
+
+    // Stream the file instead of buffering it fully in memory
+    const stream = fs.createReadStream(filePath);
+    stream.on('error', () => {
+      if (!res.headersSent) res.writeHead(500, { 'Content-Type': 'text/plain' });
+      res.end('Internal Server Error');
+    });
+    stream.pipe(res);
+  });
 });
 
 server.listen(PORT, '0.0.0.0', () => {
