@@ -37,9 +37,11 @@ function send404(res) {
 const server = http.createServer((req, res) => {
   const url = decodeURIComponent(req.url.split('?')[0]);
 
-  // Resolve the target file and guard against path traversal outside DIST
+  // Resolve the target file and guard against path traversal outside DIST.
+  // Require a trailing separator so a sibling like /app/dist-evil can't pass
+  // the prefix check.
   let filePath = path.normalize(path.join(DIST, url));
-  if (!filePath.startsWith(DIST)) {
+  if (filePath !== DIST && !filePath.startsWith(DIST + path.sep)) {
     send404(res);
     return;
   }
