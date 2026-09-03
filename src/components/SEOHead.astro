@@ -1,4 +1,5 @@
 ---
+import { AMAZON_URL } from '../consts';
 // SEOHead.astro - Reusable SEO component with structured data
 export interface Props {
   title: string;
@@ -79,7 +80,12 @@ if (type === 'article') {
     bookFormat: 'https://schema.org/Paperback',
     inLanguage: 'en',
     genre: 'Military Thriller',
-    numberOfPages: 400
+    numberOfPages: 400,
+    offers: {
+      '@type': 'Offer',
+      availability: 'https://schema.org/InStock',
+      url: AMAZON_URL
+    }
   };
 } else if (type === 'website') {
   jsonLd = {
@@ -121,7 +127,6 @@ if (type === 'article') {
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
