@@ -57,6 +57,6 @@ When I started *The Tempest Toss*, Book 1 of the John Hunter series, I didn't wa
 
 Getting the science right wasn't decoration. It was the whole point, and I've written separately about [why I refused to fudge the physics](/blog/getting-the-physics-right) and about [what a novel can say that the official record can't](/blog/why-fiction-says-what-the-record-cant).
 
-If you want the human version of all this, the version with a pulse and a countdown and people trying to stop the worst from happening, that's [the novel](/books), coming Fall 2026. If you'd rather know who's behind it and why a chemist spent two decades on a thriller, [that story's here](/about).
+If you want the human version of all this, the version with a pulse and a countdown and people trying to stop the worst from happening, that's [the novel](/books), out now on Amazon. If you'd rather know who's behind it and why a chemist spent two decades on a thriller, [that story's here](/about).
 
 The streetlights on Oahu went dark in 1962. We've had sixty years to think about what that meant. I'd argue we still haven't thought about it nearly enough.

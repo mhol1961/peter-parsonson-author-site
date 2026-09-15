@@ -1,5 +1,5 @@
 ---
-import { AMAZON_URL } from '../consts';
+import { book, bookCopy } from '../config/book';
 const base = import.meta.env.BASE_URL;
 const currentPath = Astro.url.pathname;
 const navLinks = [
@@ -17,8 +17,8 @@ function isActive(href: string): boolean {
 
 <!-- Top accent strip -->
 <div class="accent-strip">
-  <a href={AMAZON_URL} target="_blank" rel="noopener noreferrer" class="hover:text-gray-200 transition-colors">
-    THE TEMPEST TOSS &mdash; OUT NOW ON AMAZON &nbsp;&middot;&nbsp; ORDER IT HERE
+  <a href={bookCopy.ctaHref} target="_blank" rel="noopener noreferrer" class="hover:text-gray-200 transition-colors">
+    {bookCopy.bannerText} &nbsp;&middot;&nbsp; {bookCopy.ctaLabel}
   </a>
 </div>
 

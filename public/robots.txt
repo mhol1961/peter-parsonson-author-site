@@ -1,4 +1,4 @@
-# robots.txt for Peter Parsonson Author Website
+# robots.txt for P.S. Parsonson Author Website
 
 User-agent: *
 Allow: /

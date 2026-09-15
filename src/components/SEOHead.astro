@@ -1,5 +1,5 @@
 ---
-import { AMAZON_URL } from '../consts';
+import { book, bookCopy } from '../config/book';
 // SEOHead.astro - Reusable SEO component with structured data
 export interface Props {
   title: string;
@@ -68,7 +68,7 @@ if (type === 'article') {
   jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Book',
-    name: 'The Tempest Toss',
+    name: book.title,
     description: description,
     image: `${siteUrl}/images/Front-Cover.jpg`,
     url: `${siteUrl}/books/`,
@@ -83,8 +83,13 @@ if (type === 'article') {
     numberOfPages: 400,
     offers: {
       '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
-      url: AMAZON_URL
+      availability: bookCopy.availability,
+      url: book.amazonUrl,
+      seller: {
+        '@type': 'Organization',
+        name: 'Amazon',
+        url: 'https://www.amazon.com'
+      }
     }
   };
 } else if (type === 'website') {

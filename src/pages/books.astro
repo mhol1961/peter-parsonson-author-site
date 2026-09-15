@@ -1,12 +1,13 @@
 ---
 // Books page - The John Hunter Series by P.S. Parsonson
 import BaseLayout from '@layouts/BaseLayout.astro';
+import { book, bookCopy } from '../config/book';
 const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
   title="The Tempest Toss — Book Details | P.S. Parsonson"
-  description="Navy SEAL Commander John Hunter faces a coordinated terror attack on Tampa and discovers a weapon hidden in America's own infrastructure. The Dark Territory Protocol."
+  description={`Navy SEAL Commander John Hunter faces a coordinated terror attack on Tampa and discovers a weapon hidden in America's own infrastructure. ${bookCopy.availabilitySentence}`}
   type="book"
 >
   <!-- Page Hero - Full-viewport cinematic mission file -->
@@ -111,13 +112,14 @@ const base = import.meta.env.BASE_URL;
         </div>
         <div class="border border-gray-800 p-4 text-center">
           <p class="text-gray-500 uppercase tracking-widest text-[10px] mb-1">Status</p>
-          <p class="text-accent font-bold text-sm">Coming Fall 2026</p>
+          <p class="text-accent font-bold text-sm">{bookCopy.statusLabel}</p>
         </div>
       </div>
 
       <!-- CTA Buttons -->
       <div class="flex flex-col sm:flex-row gap-4">
-        <a href="#series-overview" class="btn-primary text-center">Explore the Series</a>
+        <a href={bookCopy.ctaHref} target="_blank" rel="noopener noreferrer" class="btn-primary text-center">{bookCopy.ctaLabel} &rarr;</a>
+        <a href="#series-overview" class="btn-secondary text-center">Explore the Series</a>
         <a href={`${base}about`} class="btn-secondary text-center">About the Author</a>
       </div>
     </div>
@@ -249,7 +251,7 @@ const base = import.meta.env.BASE_URL;
               <div class="flex-1">
                 <div class="flex items-center gap-3 mb-3">
                   <span class="inline-block border border-gray-700 px-3 py-1 text-xs font-bold text-cream uppercase tracking-wide">Book 1</span>
-                  <span class="inline-block border border-accent px-3 py-1 text-xs font-bold text-accent uppercase tracking-wide">Coming Fall 2026</span>
+                  <span class="inline-block bg-accent px-3 py-1 text-xs font-bold text-white uppercase tracking-wide">{bookCopy.statusLabel}</span>
                 </div>
                 <h3 class="text-3xl font-heading font-black text-cream mb-4 uppercase tracking-wide">
                   The Tempest Toss
@@ -257,8 +259,8 @@ const base = import.meta.env.BASE_URL;
                 <p class="text-gray-300 leading-relaxed mb-6">
                   Navy SEAL Commander John Hunter survives a devastating terrorist attack on Tampa and uncovers a sixty-year conspiracy rooted in Cold War EMP weapons research. With a Chinese freighter running dark in the Gulf and a traitor inside the wire, the race to prevent catastrophe begins.
                 </p>
-                <a href={`${base}contact`} class="inline-flex items-center text-accent font-bold uppercase tracking-wide hover:text-primary transition-colors">
-                  Get Notified &rarr;
+                <a href={bookCopy.ctaHref} target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-accent font-bold uppercase tracking-wide hover:text-primary transition-colors">
+                  {bookCopy.ctaLabel} &rarr;
                 </a>
               </div>
             </div>
@@ -298,41 +300,48 @@ const base = import.meta.env.BASE_URL;
     </div>
   </section>
 
-  <!-- Pre-Release — Coming Soon -->
+  <!-- Acquire Target — Live on Amazon -->
   <section class="section-dark py-16 md:py-20">
     <div class="max-w-4xl mx-auto px-6">
       <div class="text-center mb-12">
         <p class="section-label">Acquire Target</p>
         <h2 class="text-4xl md:text-5xl font-heading font-black text-cream uppercase tracking-tighter mb-4">
-          Coming Fall 2026
+          {bookCopy.statusLabel}
         </h2>
         <p class="text-gray-400 text-lg">
-          The Tempest Toss will be available in paperback, hardcover, Kindle, and audiobook across all major platforms.
+          The Tempest Toss is out in paperback and on Kindle. More formats and retailers to follow.
         </p>
       </div>
 
       <div class="grid md:grid-cols-4 gap-6 mb-12">
-        <div class="border-2 border-gray-800 p-6 text-center opacity-60" style="background: rgba(17,24,39,0.5);">
+        <a
+          href={bookCopy.ctaHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="border-2 border-accent p-6 text-center transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/30"
+          style="background: rgba(220, 38, 38, 0.08);"
+        >
           <h3 class="text-lg font-heading font-black text-cream uppercase tracking-wide mb-2">Amazon</h3>
-          <p class="text-sm text-gray-500">Paperback & Kindle</p>
-        </div>
+          <p class="text-sm text-gray-300">Paperback &amp; Kindle</p>
+          <p class="text-xs text-accent font-bold uppercase tracking-widest mt-3">{bookCopy.ctaLabel} &rarr;</p>
+        </a>
         <div class="border-2 border-gray-800 p-6 text-center opacity-60" style="background: rgba(17,24,39,0.5);">
-          <h3 class="text-lg font-heading font-black text-cream uppercase tracking-wide mb-2">Barnes & Noble</h3>
-          <p class="text-sm text-gray-500">Hardcover & Nook</p>
+          <h3 class="text-lg font-heading font-black text-cream uppercase tracking-wide mb-2">Barnes &amp; Noble</h3>
+          <p class="text-sm text-gray-500">Coming soon</p>
         </div>
         <div class="border-2 border-gray-800 p-6 text-center opacity-60" style="background: rgba(17,24,39,0.5);">
           <h3 class="text-lg font-heading font-black text-cream uppercase tracking-wide mb-2">Apple Books</h3>
-          <p class="text-sm text-gray-500">Digital Edition</p>
+          <p class="text-sm text-gray-500">Coming soon</p>
         </div>
         <div class="border-2 border-gray-800 p-6 text-center opacity-60" style="background: rgba(17,24,39,0.5);">
-          <h3 class="text-lg font-heading font-black text-cream uppercase tracking-wide mb-2">Local Bookstore</h3>
-          <p class="text-sm text-gray-500">Support Independent</p>
+          <h3 class="text-lg font-heading font-black text-cream uppercase tracking-wide mb-2">Audiobook</h3>
+          <p class="text-sm text-gray-500">Coming soon</p>
         </div>
       </div>
 
       <div class="text-center">
-        <p class="text-gray-400 mb-6">Be the first to know when pre-orders open.</p>
-        <a href={`${base}contact`} class="btn-primary">Get on the List</a>
+        <p class="text-gray-400 mb-6">Want to know the moment Book 2 lands? Get on the list.</p>
+        <a href={`${base}contact`} class="btn-secondary">Get Launch Updates</a>
       </div>
     </div>
   </section>

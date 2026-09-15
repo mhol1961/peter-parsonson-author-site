@@ -4,7 +4,7 @@ import { glob } from 'astro/loaders';
 // Blog ("Field Dispatches") content collection.
 // Each article is a Markdown file in src/content/blog/<slug>.md
 const blog = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
+  loader: glob({ pattern: ['**/*.md', '!**/CLAUDE.md'], base: './src/content/blog' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),   // meta description / SEO

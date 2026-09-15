@@ -1,4 +1,4 @@
-# Peter P. Author Website
+# P.S. Parsonson Author Website
 
 A professional military thriller author website built with Astro 5, Tailwind CSS 4, and optimized for SEO and mobile devices.
 
@@ -97,7 +97,7 @@ npm run preview
 ### Site URL
 Update `astro.config.mjs` with your domain:
 ```javascript
-site: 'https://peterparsonson.com'
+site: 'https://psparsonson.com'
 ```
 
 ### Mailchimp
@@ -168,7 +168,7 @@ Standard static site hosting works. Ensure the `dist/` folder is served as root.
 
 ## License
 
-This website template is custom-built for Peter P. Modify as needed for your use case.
+This website template is custom-built for P.S. Parsonson. Modify as needed for your use case.
 
 ## Support
 

@@ -2,6 +2,7 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import NewsletterSignup from '@components/NewsletterSignup.astro';
 import { getCollection } from 'astro:content';
+import { book, bookCopy } from '../config/book';
 const base = import.meta.env.BASE_URL;
 
 const latestPosts = (await getCollection('blog', ({ data }) => !data.draft))
@@ -72,15 +73,15 @@ const postImg = (p) => `${base}${p.replace(/^\//, '')}`;
           </div>
 
           <div class="animate-fade-in-up delay-400 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#join" class="btn-primary animate-pulse-glow">
-              Get Launch Updates &rarr;
+            <a href={bookCopy.ctaHref} target="_blank" rel="noopener noreferrer" class="btn-primary animate-pulse-glow">
+              {bookCopy.ctaLabel} &rarr;
             </a>
             <a href={`${base}books`} class="btn-secondary">
               Enter the Dark Territory
             </a>
           </div>
           <p class="animate-fade-in-up delay-400 text-white/55 text-xs sm:text-sm mt-5 max-w-md mx-auto leading-relaxed">
-            Be first to know when pre-orders open &mdash; Fall 2026. No spam, ever.
+            {bookCopy.availabilitySentence} Or <a href="#join" class="text-primary-light underline underline-offset-4 hover:text-accent transition-colors">get on the list</a> for Book 2.
           </p>
           <p class="mil-text-red mt-6">Clearance: Top Secret // SCI</p>
         </div>
@@ -281,7 +282,7 @@ const postImg = (p) => `${base}${p.replace(/^\//, '')}`;
               loading="lazy"
             />
             <div class="absolute top-3 right-3 px-2 py-1 bg-accent text-white text-[10px] font-bold uppercase tracking-wider z-[2]">
-              Coming Fall 2026
+              {bookCopy.statusLabel}
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-[2]"></div>
           </div>
