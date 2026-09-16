@@ -1,7 +1,7 @@
 {
   "name": "peter-parsonson-author-site",
   "version": "1.0.0",
-  "description": "Military thriller author website for Peter P.",
+  "description": "Military thriller author website for P.S. Parsonson",
   "type": "module",
   "scripts": {
     "dev": "astro dev",

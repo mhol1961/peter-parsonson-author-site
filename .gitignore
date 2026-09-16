@@ -40,3 +40,11 @@ pnpm-debug.log*
 # Lock files (optional - remove if you want to check in)
 # package-lock.json
 # pnpm-lock.yaml
+
+# claude-mem auto-generates empty CLAUDE.md context stubs in directories it
+# touches. Inside src/pages/ they become live Astro routes; inside public/ they
+# are copied verbatim into dist/. Ignore them everywhere except the two real,
+# hand-maintained docs at the repo root and in docs/.
+CLAUDE.md
+!/CLAUDE.md
+!/docs/CLAUDE.md

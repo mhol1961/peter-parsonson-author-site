@@ -1,12 +1,12 @@
 # Claude.md — Project-Level Instructions
 
-This document provides AI assistants with critical context for working on the Peter Parsonson author website codebase.
+This document provides AI assistants with critical context for working on the P.S. Parsonson author website codebase.
 
 ## Project Overview
 
-**Project Name:** Peter Parsonson Author Website (peterparsonson.com)
+**Project Name:** P.S. Parsonson Author Website (psparsonson.com)
 **Launch Window:** June/July 2026
-**Author Brand:** Peter P. (military thriller author)
+**Author Brand:** P.S. Parsonson (military thriller author)
 **Primary Work:** "The Tempest Toss" — Book 1 of the John Hunter Series
 
 ## Tech Stack
@@ -141,8 +141,8 @@ PeterParsonson.com New Book Site/
 ## Critical Context
 
 ### Author Branding
-- Public name: **Peter P.** (NOT Peter Parsonson)
-- Website domain: **peterparsonson.com** (full legal name)
+- Public name: **P.S. Parsonson** — written exactly that way everywhere (no "Peter P.", no "Peter Parsonson"). Bare surname "Parsonson" is fine in running prose.
+- Website domain: **psparsonson.com** (live, served from Railway)
 - Genre: Military thriller (USCG Authors Program member)
 - Comparable author: Jack Carr (officialjackcarr.com style inspiration)
 
@@ -254,3 +254,8 @@ PeterParsonson.com New Book Site/
 
 **Last Updated:** March 2026
 **Maintained By:** [Project Lead]
+
+
+<claude-mem-context>
+
+</claude-mem-context>
