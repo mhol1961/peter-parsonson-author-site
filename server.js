@@ -34,8 +34,32 @@ function send404(res) {
     .pipe(res);
 }
 
+function sendError(res, status, message) {
+  if (res.headersSent) {
+    res.end();
+    return;
+  }
+  res.writeHead(status, { 'Content-Type': 'text/plain' });
+  res.end(message);
+}
+
 const server = http.createServer((req, res) => {
-  const url = decodeURIComponent(req.url.split('?')[0]);
+  try {
+    handleRequest(req, res);
+  } catch (err) {
+    console.error('Unexpected error handling', req.url, err);
+    sendError(res, 500, 'Internal Server Error');
+  }
+});
+
+function handleRequest(req, res) {
+  let url;
+  try {
+    url = decodeURIComponent(req.url.split('?')[0]);
+  } catch {
+    sendError(res, 400, 'Bad request');
+    return;
+  }
 
   // Resolve the target file and guard against path traversal outside DIST.
   // Require a trailing separator so a sibling like /app/dist-evil can't pass
@@ -53,6 +77,16 @@ const server = http.createServer((req, res) => {
 
   // Async stat so the event loop is never blocked
   fs.stat(filePath, (err, stat) => {
+    try {
+      serveFile(res, filePath, err, stat);
+    } catch (e) {
+      console.error('Unexpected error serving', filePath, e);
+      sendError(res, 500, 'Internal Server Error');
+    }
+  });
+}
+
+function serveFile(res, filePath, err, stat) {
     if (err || !stat.isFile()) {
       send404(res);
       return;
@@ -77,8 +111,7 @@ const server = http.createServer((req, res) => {
       res.end('Internal Server Error');
     });
     stream.pipe(res);
-  });
-});
+}
 
 server.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
