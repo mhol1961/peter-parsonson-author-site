@@ -16,7 +16,7 @@ export interface Props {
 const {
   title,
   description,
-  ogImage = '/og-image.jpg',
+  ogImage = '/og-image.jpg?v=2',
   canonical,
   type = 'website',
   author = 'P.S. Parsonson',
@@ -72,7 +72,7 @@ if (type === 'article') {
     '@type': 'Book',
     name: book.title,
     description: description,
-    image: `${siteUrl}/images/Front-Cover.jpg`,
+    image: `${siteUrl}/images/Front-Cover.jpg?v=2`,
     url: `${siteUrl}/books/`,
     author: {
       '@type': 'Person',
