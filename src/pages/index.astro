@@ -21,14 +21,19 @@ const postImg = (p) => `${base}${p.replace(/^\//, '')}`;
        HERO - Full-screen cinematic with book cover
        ========================================== -->
   <section class="relative min-h-screen flex items-center overflow-hidden scan-lines hero-cinematic">
-    <!-- Missile launch from center ship — fires every 3 seconds -->
-    <div class="missile-launch hidden md:block">
-      <div class="missile-flash"></div>
-      <div class="missile-body"></div>
-      <div class="missile-trail"></div>
-      <div class="smoke-puff smoke-puff-1"></div>
-      <div class="smoke-puff smoke-puff-2"></div>
-      <div class="smoke-puff smoke-puff-3"></div>
+    <!-- Missile launch from center ship — fires every 3 seconds.
+         Wrapped in a layer cropped exactly like hero-bg.jpg so it stays on the ship. -->
+    <div class="hero-ship-layer">
+      <div class="hero-ship-frame">
+        <div class="missile-launch hidden md:block">
+          <div class="missile-flash"></div>
+          <div class="missile-body"></div>
+          <div class="missile-trail"></div>
+          <div class="smoke-puff smoke-puff-1"></div>
+          <div class="smoke-puff smoke-puff-2"></div>
+          <div class="smoke-puff smoke-puff-3"></div>
+        </div>
+      </div>
     </div>
 
     <!-- Radar scope - atmospheric element behind text, with missile tracking blip -->

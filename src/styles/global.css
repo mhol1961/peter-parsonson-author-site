@@ -789,11 +789,32 @@ textarea::placeholder {
    MISSILE LAUNCH EFFECT (Repeating every 3s)
    ============================================ */
 
-/* Launch origin — the ship circled in the screenshot, right of text, left of book cover */
+/* Layer matching the hero picture's crop: same size, centring and "cover"
+   behaviour as hero-bg.jpg (1536x1024), so a % inside it is a % of the picture. */
+.hero-ship-layer {
+  position: absolute;
+  inset: 0;
+  container-type: size;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-ship-frame {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;  /* fallback for browsers without container units: old behaviour */
+  height: 100%;
+  width: max(100cqw, calc(100cqh * 1536 / 1024));
+  height: max(100cqh, calc(100cqw * 1024 / 1536));
+  transform: translate(-50%, -50%);
+}
+
+/* Launch origin — forward deck of the centre ship at (1025, 558) in hero-bg.jpg */
 .missile-launch {
   position: absolute;
-  left: 67%;
-  top: 55%;
+  left: 66.7%;
+  top: 54.5%;
   z-index: 2;
   pointer-events: none;
 }
