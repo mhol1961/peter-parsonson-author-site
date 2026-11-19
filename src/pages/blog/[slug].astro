@@ -30,6 +30,7 @@ const related = all
   type="article"
   publishDate={post.data.pubDate.toISOString()}
   ogImage={post.data.image}
+  preloadImage={img(post.data.image)}
 >
   <div class="read-progress" id="read-progress"></div>
 

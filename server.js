@@ -34,6 +34,17 @@ function send404(res) {
     .pipe(res);
 }
 
+// Sent with every reply. The CSP matches what the site already used as a
+// <meta> tag, plus frame/form/base rules a meta tag can't enforce.
+const SECURITY_HEADERS = {
+  'Strict-Transport-Security': 'max-age=31536000',
+  'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; frame-ancestors 'none'; base-uri 'self'; object-src 'none'",
+  'X-Frame-Options': 'DENY',
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=()',
+};
+
 function sendError(res, status, message) {
   if (res.headersSent) {
     res.end();
@@ -44,6 +55,7 @@ function sendError(res, status, message) {
 }
 
 const server = http.createServer((req, res) => {
+  for (const [name, value] of Object.entries(SECURITY_HEADERS)) res.setHeader(name, value);
   try {
     handleRequest(req, res);
   } catch (err) {

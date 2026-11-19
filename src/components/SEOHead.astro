@@ -10,6 +10,7 @@ export interface Props {
   author?: string;
   publishDate?: string;
   image?: string;
+  preloadImage?: string;
 }
 
 const {
@@ -20,7 +21,8 @@ const {
   type = 'website',
   author = 'P.S. Parsonson',
   publishDate,
-  image
+  image,
+  preloadImage
 } = Astro.props;
 
 const siteUrl = 'https://psparsonson.com';
@@ -35,7 +37,7 @@ let jsonLd: any = {
   jobTitle: 'Military Thriller Author',
   description: 'Military thriller author and USCG Authors Program member',
   url: siteUrl,
-  image: `${siteUrl}/images/Front-Cover.jpg`,
+  image: `${siteUrl}/images/pete-author-image.jpg`,
   alumniOf: {
     '@type': 'CollegeOrUniversity',
     name: 'Georgia Institute of Technology'
@@ -135,12 +137,14 @@ if (type === 'article') {
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/favicon.png" />
 
+  <!-- Hero background image: fetch early so the first screen paints sooner -->
+  {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
+
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
-  <!-- Security Headers as Meta Tags -->
+  <!-- Security headers (incl. Content-Security-Policy) are sent by server.js -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://formspree.io https://api.mailchimp.com;" />
 
   <!-- Title -->
   <title>{title}</title>
